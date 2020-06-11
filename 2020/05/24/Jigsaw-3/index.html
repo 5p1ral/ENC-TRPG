@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"blog.maddestroyer.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="我是个闲人，每天在各个跑团群里闲逛，准确来说，应该是无限流跑团群。一般来说，只要是公开招人的无限流跑团群，群里一定会有我的身影。每当进到一个新的跑团群，我第一时间都是翻群文件——没错，我是在寻找规则书。在这个过程中，我看到了一些所谓的“自创”规则作者，背景故事写得一坨稀烂，游戏机制照抄DND和COC（注意我所说的“机制”并不是简单的掷骰），强度平衡做得离谱，跑起团来疯狂口胡，一出什么问题就开始声称">
+  <meta name="description" content="本文仅适用于无限流TRPG（当然现在原创规则作者最多的一个类别就是无限流了，毕竟无限流只要看过几本网文就能了解基本世界观，然后再缝合几个COC和DND的皮毛规则就成了。） 今天我要谈论的问题与平衡有关。根据我在无限流的群里蛰伏这么久，当今的无限流规则主要有两种流派，一种是像无限恐怖TRPG（这点猪鹿蝶三版都一样）为代表的，作者不会去关心主持人开团时的情况，主持人和作者之间并没有直属的关系；另一种就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【给各位规则作者】为什么我不喜欢百分比">
-<meta property="og:url" content="https://blog.maddestroyer.xyz/2020/05/24/trpg-1/index.html">
+<meta property="og:title" content="【给各位规则作者】强度黑箱与数值平衡">
+<meta property="og:url" content="https://blog.maddestroyer.xyz/2020/05/24/Jigsaw-3/index.html">
 <meta property="og:site_name" content="Spiral&#39;s Blog">
-<meta property="og:description" content="我是个闲人，每天在各个跑团群里闲逛，准确来说，应该是无限流跑团群。一般来说，只要是公开招人的无限流跑团群，群里一定会有我的身影。每当进到一个新的跑团群，我第一时间都是翻群文件——没错，我是在寻找规则书。在这个过程中，我看到了一些所谓的“自创”规则作者，背景故事写得一坨稀烂，游戏机制照抄DND和COC（注意我所说的“机制”并不是简单的掷骰），强度平衡做得离谱，跑起团来疯狂口胡，一出什么问题就开始声称">
+<meta property="og:description" content="本文仅适用于无限流TRPG（当然现在原创规则作者最多的一个类别就是无限流了，毕竟无限流只要看过几本网文就能了解基本世界观，然后再缝合几个COC和DND的皮毛规则就成了。） 今天我要谈论的问题与平衡有关。根据我在无限流的群里蛰伏这么久，当今的无限流规则主要有两种流派，一种是像无限恐怖TRPG（这点猪鹿蝶三版都一样）为代表的，作者不会去关心主持人开团时的情况，主持人和作者之间并没有直属的关系；另一种就">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-24T08:09:12.000Z">
-<meta property="article:modified_time" content="2020-05-30T13:17:11.229Z">
+<meta property="article:published_time" content="2020-05-24T08:09:34.000Z">
+<meta property="article:modified_time" content="2020-06-10T13:40:56.021Z">
 <meta property="article:author" content="Spiral">
 <meta property="article:tag" content="TRPG">
+<meta property="article:tag" content="无限流">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blog.maddestroyer.xyz/2020/05/24/trpg-1/">
+<link rel="canonical" href="https://blog.maddestroyer.xyz/2020/05/24/Jigsaw-3/">
 
 
 <script id="page-configurations">
@@ -46,7 +47,7 @@
   };
 </script>
 
-  <title>【给各位规则作者】为什么我不喜欢百分比 | Spiral's Blog</title>
+  <title>【给各位规则作者】强度黑箱与数值平衡 | Spiral's Blog</title>
   
 
 
@@ -168,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/24/trpg-1/">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/24/Jigsaw-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-spiral.gif">
@@ -181,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【给各位规则作者】为什么我不喜欢百分比
+          【给各位规则作者】强度黑箱与数值平衡
         </h1>
 
         <div class="post-meta">
@@ -191,14 +192,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-05-24 16:09:12" itemprop="dateCreated datePublished" datetime="2020-05-24T16:09:12+08:00">2020-05-24</time>
+              <time title="创建时间：2020-05-24 16:09:34" itemprop="dateCreated datePublished" datetime="2020-05-24T16:09:34+08:00">2020-05-24</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-30 21:17:11" itemprop="dateModified" datetime="2020-05-30T21:17:11+08:00">2020-05-30</time>
+                <time title="修改时间：2020-06-10 21:40:56" itemprop="dateModified" datetime="2020-06-10T21:40:56+08:00">2020-06-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -216,7 +217,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.3k</span>
+              <span>2.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -235,32 +236,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>我是个闲人，每天在各个跑团群里闲逛，准确来说，应该是无限流跑团群。一般来说，只要是公开招人的无限流跑团群，群里一定会有我的身影。每当进到一个新的跑团群，我第一时间都是翻群文件——没错，我是在寻找规则书。在这个过程中，我看到了一些所谓的“自创”规则作者，背景故事写得一坨稀烂，游戏机制照抄DND和COC（注意我所说的“机制”并不是简单的掷骰），强度平衡做得离谱，跑起团来疯狂口胡，一出什么问题就开始声称自己的规则是“口胡规则”，“请玻璃心玩家离开”。</p>
-<p>我不知道大家对于“规则书”的定义是怎么理解的，反正我的理解是这样：<strong>规则书上描述的是完整的、精确的规则，一个玩家应该通过阅读规则书就能够完全地了解这款TRPG的游戏机制、游戏背景、游戏流程。</strong>有些人在规则书里写道：“强度交给群管理员就够了，你不需要知道。这些背景故事，群主知道就够了，你们不需要知道。”那么请问这些规则书有什么实际的作用吗？玩家看了之后对于整个游戏机制就是一脸懵逼，最后还是跟着主持人的说法走，连主持人有没有遵守规则都无从得知。这种规则书在我看来就像是个霸王条款，我从全文里只看出了四个大字——都听我的。</p>
-<p>我希望各位去仔细思考一个问题：<strong>TRPG为什么需要规则？</strong> TRPG有三个要素，T、RP和G，<strong>“桌面”、“角色扮演”和“游戏”</strong>。“桌面”这个要素决定了TRPG的数值无法使用复杂的运算系统，这也是本文要重点阐述的部分。“角色扮演”是TRPG的核心要素，或者说是TRPG最具有吸引力的一个要素，这点众多大神都已经发表过自己的见解。但这第一点并不是本文的重点，我就不多说明了。（关于这一点我觉得隔壁约书亚的帖子值得一看）“游戏”则使TRPG有别与一般的角色扮演，也就是俗称的“过家家”，这点也是本文重点阐述的部分。</p>
-<p>这里不得不提到<strong>“口胡”</strong>这个概念，有些人可能是认为口胡是“无视规则”，是“为所欲为”，但是实际上口胡只是将规则在游戏中的比重放低了而已，即<strong>“轻规则”</strong>。举个例子，正常团，也就是某些人认为的“规则团”（他们可能是觉得把口胡和规则对立就能够表现出自己开的也是个团？），PC需要做一项动作时，可能主持人第一时间想到的就是“掷个骰子”，然后依靠骰子的结果来决定本次行动是否成功；而在口胡团里，主持人可能会通过直觉来判定本次行动是否成功（也就是俗称的心判）。也就是，口胡团只是忽略掉了大量的次要掷骰，从而得到了较高的自由度与扮演流畅性，但是在遇到一些重要的剧情节点的时候，主持人一般还是会让你掷骰的。</p>
-<p>另外，再说下一下<strong>“半口胡”</strong>这个奇怪的概念吧。这个词汇不知道是谁先提出来了，某些人就这样自诩待在“口胡”与“规则”的中间，从而让自己比“口胡”高上一等，又能比“规则”多一些自由度。<strong><font color="#FF0000">这根本就是在扯淡。</font></strong>规则就是规则，口胡就是口胡，哪有什么半规则半口胡的古怪玩意儿。只要你掷骰的比重比正常的团少，你就是口胡了。至于那些完全不掷骰，或者说跑了一个好几天的团才有两三个掷骰的，对不起，您这不叫口胡，您要么叫做文字游戏，要么就叫做语戏或者演绎。说实话，“口胡”这个词可能也给了萌新一些刻板印象，认为口胡就是张口就来，不需要考虑任何规则，我希望以后再提及口胡相关的团时，能使用更为准确的<strong>“轻规则”</strong>来指代。</p>
-<p>本文面向的，就是这些觉得《无限恐怖TRPG》太难了，或者说是不满无限恐怖继承的WOD机制与DND机制，又脑门一拍，就开始搞所谓的“原创”规则的朋友们。首先明确的一点是：我并不是在打压新人，也并不是不尊重你的梦想。（甚至我自己也是个自创规则的参与者）我已经尽量地在本文中避免主观情绪的出现，力求做到客观与准确。</p>
-<p>回到最开始的问题:<strong>TRPG为什么需要规则？</strong></p>
-<p>我们不妨进一步问：<strong>游戏为什么需要规则？</strong></p>
-<p>没有为什么，游戏就需要规则。或者说，没有规则的不叫做游戏。</p>
+        <p>本文仅适用于<strong>无限流TRPG</strong>（当然现在原创规则作者最多的一个类别就是无限流了，毕竟无限流只要看过几本网文就能了解基本世界观，然后再缝合几个COC和DND的皮毛规则就成了。）</p>
+<p>今天我要谈论的问题与平衡有关。根据我在无限流的群里蛰伏这么久，当今的无限流规则主要有两种流派，一种是像无限恐怖TRPG（这点猪鹿蝶三版都一样）为代表的，作者不会去关心主持人开团时的情况，主持人和作者之间并没有直属的关系；另一种就海了去了，本文中我暂时以轮回游戏二版为代表，这种制度下，玩家的角色卡会统一由中心群存档，主持人会因为开团得到规则内的积分奖励（其实就跟传销差不多，拿虚拟货币来让你办事情），也会因为开团不好而得到惩罚（黑名单或者踢群）。<br>这两者的差别是很明显的，第一种的规则，制作者只是制作者，他们只负责平衡强度以及审核资源，不会充当风纪委以及中心服务器的角色；而后一种规则，往往制作者同时也是管理者，他们不只审核资源，还要充当风纪委，审核玩家的角色卡。从电子游戏的角度举一个不那么恰当的例子，前者像是单机游戏，你只要把游戏下载到本地就能游玩，你开挂作弊利用恶性bug，只要不把篓子捅到厂商那里就没人管；而后者像是网络游戏，你所有的东西都要经过同步才能使用，而且你只要一做出非法举动就有可能遭遇封号。<br>这两种模式，我也不能够简单地去评判到底孰好孰坏，以互联网精神来说，以一名玩家的角度来说，我更喜欢的无疑是前者，这种去中心化的模式为玩家和主持人提供了极大的自由度；而以一名规则书制作参与者的角度来说，我更喜欢的是后者，因为这样我能保证自己参与制作的规则书不会出现严重的平衡问题，就算出现了问题我也能够第一时间知道。</p>
+<p>当然我今天也不是为了评判这两种模式，我也不能简单地就说：“<strong>中心化</strong>的，不好；<strong>去中心化的</strong>，好。”我今天要聊的是这两种模式共有的一个职位——<strong>审核员</strong>。</p>
+<p>无限流规则书与其他规则书最大区别就在于此。无限流规则中核心规则的比重往往只占了小部分，更大的部分则是强化资源，因为强化的资源会随着时间的积累而变得越来多，而规则稳定下来就不会有多大的变化。（所以说星光规则书几千页这个梗到底是谁传出来的，他妈的不知道那些都是资源吗？）这是不可改变的一个事实，随着时间的推移，同质化的资源会越来越多（实际上这是在网游里经常出现的事情，LOL不断推出独特机制的新英雄，CF不断推出新的模式就是因为如此），玩家的新鲜感会不断降低。而为了应对这些问题，投稿资源的玩家们就会尝试提出新的机制，然而这些机制往往都会有一定的滥强和滥弱，这就需要审核员的存在来进行平衡。</p>
+<h4 id="为什么说审核是件麻烦事？"><a href="#为什么说审核是件麻烦事？" class="headerlink" title="为什么说审核是件麻烦事？"></a>为什么说审核是件麻烦事？</h4><p>因为审核的工作在长期以来都是十分主观化的，一个东西的强度往往都是由不同的审核员简单地评判，如果有不同的意见再进行讨论。这种十分依靠审核员的平衡意识的工作，或者说是所有过度依靠人力的工作，总会出现一些漏网之鱼。尽管议会制审核能够避免绝大多数的此类问题，但时间一久还是会出现一两个奇葩。</p>
+<p>审核员一般又都是用爱发电，再加上审核工作的复杂性，想要提高效率，就得增加审核的数量。而审核的数量一多起来，难免会出现几个奇葩，导致整体的工作进度不断被拖慢，甚至在平衡上开倒车。这是一个悖论，如果你想要可控，那就只能亲力亲为；如果你想要效率，那就得放权。</p>
+<h4 id="怎么平衡？"><a href="#怎么平衡？" class="headerlink" title="怎么平衡？"></a>怎么平衡？</h4><p>最简单、最适合没有足够知识水平的人的方法是看表象，也就是传说中的暴雪平衡法，谁在赛场上表现得强了，就把谁砍掉。但是很不幸，这种方法需要充足的数据样本，是目前玩家数量稀少的无限流TRPG远远无法做到的。没有样本怎么办？有的人一拍脑门，认为自己觉得强就是强，大手一挥就砍了下去；而有的人则觉得需要谨慎一点，在审核员里开了个会来决定砍不砍。这种方法最重要的就是要发挥人的“主观能动性”，弊端也很明显是人的“主观能动性”所导致的。</p>
+<p>当暴雪平衡法用多了，我们大抵都会感受到人力资源的可贵。为了减轻劳动力的负担，我们都能够想出一个方法：建立一套基本能够逻辑自恰的数值模型，以这套数值模型作为标准，强的就是需要砍的滥强，弱的就是需要加强的滥弱。这套方法显然比前者要靠谱许多，省去了许多需要主观判断的麻烦。但问题还是没有得到根本的解决，制作资源的人显然无处知晓这套数值模型，车出来的各种东西还是带有许多问题。再进一步的方法则是公布这套数值模型，但是公布之后意味着强度规则容易被彻底摸透，一些人能够在符合规则的地方进行滥强。</p>
+<p>举个无限恐怖TRPG的例子，用目前负责无限恐怖2.5R的逆神猪dalao的话说，星光版（2.XX）运用了暴雪式平衡法，谁在跑团的过程中表现出了超越同级的强度就砍掉；冯德版（FX）则是在表层上运用了系统的数值平衡原理却没有改动底层框架；而神猪版（2.5R）则是运用了他自己所理解的数值平衡原理的三合一版。</p>
 <blockquote>
-<p>游戏是一种基于物质需求满足之上的，在一些特定时间、空间范围内遵循某种特定规则的，追求精神世界需求满足的社会行为方式，但同时这种行为方式也是哺乳类动物或者灵长类动物所需的一种降压减排的方式，不管是在出生幼年期，或者发育期，成熟期都会需要的一种行为方式。游戏是一种基于物质需求满足之上的，在一些特定时间、空间范围内遵循某种特定规则的，追求精神世界需求满足的社会行为方式，但同时这种行为方式也是哺乳类动物或者灵长类动物所需的一种降压减排的方式，不管是在出生幼年期，或者发育期，成熟期都会需要的一种行为方式。</p>
+<p><strong>谁他妈高兴在写资源的时候翻特性表，还不是跟吸了大麻似得嗨到哪算哪。</strong></p>
 </blockquote>
-<p>这是百度百科对于游戏的定义。</p>
-<p>我相信大伙如果小时候玩过过家家或者类似的游戏的时候，肯定会跟自己的小伙伴发生点争执。比如你想要当爸爸，想要你的小伙伴当儿子；你的小伙伴想要你当儿子，他来当爸爸。最后你们是怎么解决的？可能是打了一架，也有可能是石头剪刀布或者其他，总之，谁打赢了谁就当爸爸，这就是一个简单的规则了。（在现如今的TRPG游戏中，你也可以试试跟主持人进行肉搏来判定行动是否成功。当然，我个人并不保证你的人身安全。）</p>
-<p>再举个例子，小时候还有个常见的游戏。我“诅咒”你，你“反弹”我，我“反弹你的反弹”，你再“禁止反弹”。为什么这种幼稚的游戏永无止境，因为它没有办法判定谁赢谁输，所以你们就可以一直这样套娃下去。</p>
-<p><strong>简单来说，规则就是用来判定谁输谁赢的。</strong></p>
-<p>说完了规则的问题，我们终于能够进入这篇文章的正题了：<strong>为什么我不喜欢百分比？</strong></p>
-<p>这里我再提出一个问题：<strong>什么样的游戏数值运算具有百分比？</strong></p>
-<p>答案是CRPG。巫师、上古卷轴、黑暗之魂，这些游戏的数值运算都运用到了数量庞大的百分比。因为它们是CRPG，它们无需考虑运算的问题——在一切CRPG里，运算都是由计算机完成的，玩家只需要游玩就行了。游戏厂商就是游戏的主持人，而计算机是骰子。在CRPG里的一切掷骰都不需要你来操心，你只需要进行攻击的动作，伤害数值自然而然的就会在敌人的身上跳出来，而你对其中的运算机制一无所知。游戏厂商一般也不希望你们知道它们的游戏机制，除非你专门花钱去买它们的设定集（有的游戏甚至设定集里只有原画），毕竟一旦玩家知道了这些数值运算与游戏机制，这个游戏的战斗在玩家眼里就已经“没有挑战性”了（这里说个冷知识，只狼的忍杀其实不是必杀伤害，而是你普攻伤害的600倍。）</p>
-<p>这就反映出<strong>CRPG</strong>和<strong>TRPG</strong>的一个显着区别了。</p>
-<p>TRPG首先是个社交游戏，玩家和主持人的目的本质上是一致的，就是要一起讲述一个好故事，并在这个过程中收获快乐。（我是不太懂那些处处刁难玩家的主持人都是什么心态）在跑团圈里有一句很经典的话：<strong>“先做朋友，再跑团”</strong>如果你和主持人根本就谈不来，那么真的没必要一起玩游戏。</p>
-<p>为了能够在桌面上进行游戏，TRPG的规则复杂度其实已经被限定了一个上限。（除非哪一天人类的大脑进化到可以秒算三位数乘除法，要不就别指望复杂度提升了）你总不能丢个骰子先乘以一个系数再加上一大堆附加值然后再进行一次有余数的除法吧，那样谁还想玩啊，整局游戏就光掷骰了。由于复杂度被钉死了，TRPG的数值就难以使用一系列的数学手段使其平衡（例如LOL的护甲机制在TRPG里压根是想都不敢想）。</p>
-<p>当然，在这个社交网络异常繁荣的时代，TRPG又演变出了一个新的形式——也就是我们俗称的网团。网团的角色卡主要借助了Excel这一工具，从而能够自动化许多运算，这也为TRPG提供了新的可能性——能否有一个新的规则，既保留了TRPG的核心三要素，又能够借用计算机的计算能力来实现数值的平衡？我没法断定这种新型的规则到底是好是坏，也不能够断定这种规则在将来是否能够发展起来，甚至不知道这种新型的RPG游戏是否会有一个新的名字（毕竟他们已经脱离了桌面的形式）。但是我可以说，在目前的环境下，试图复杂化运算绝对是一种吃力不讨好的事情。</p>
-<p>回到最初的话题，很多“原创”规则书作者会用百分比机制来表现一个技能或者一个能力有多么的强大，但是随着游戏体量的增大，百分比反倒会成为一个巨大的问题。我不喜欢百分比的原因就是如此，一旦百分比入侵了你的规则，平衡性基本上就成为一个笑话了。</p>
-<p><strong><font color="#FF0000">相信我，百分比对于知识水平较低的人来说，反而会对平衡性造成打击。</font></strong></p>
-<p>什么？你说你知识水平很高？那你能比得上一个公司吗？</p>
+<p><em>很不幸的是，目前轮回游戏所谓的“词条”与无限恐怖的“特性”并没有什么本质上的区别（所以我们不过是在走很多年前前辈们就走过的老路而已）。更不幸的是，很多规则并没有走上这条路，而是走上了更为崎岖的道路。</em></p>
+<p>有的规则，没有把强度明着写在规则书，这点我在第一个关于TRPG的帖子就已经提到了，我也不好意思指出来到底是谁。但是，请思考一下：如果规则书里没有强度的判别方法，那你这个规则书有什么作用？用来说明世界观吗？那你这玩意儿不应该叫背景故事吗？如果强度只是你这个作者的一言堂，那这个规则书还有什么存在的必要？反正强不强也是你说了算，这本书不就是一张厕纸？</p>
+<p>强度在这种规则实质上成为了一个“黑箱”，玩家和主持人对于强度无法直观地感受，只能通过其外在表现来评判它们的强与弱。规则书作者作为“黑箱”的操纵者，有着过于巨大的权力去干预资源的强度而让玩家和主持人不会感知到。</p>
+<p>而与之相对的则是，制订一套强度的标准，将所有的标准写在规则书里，不再提供强度的兑换，而是由玩家在自己需要兑换时根据，也就是目前轮回游戏正在更新的三版所采用的方法。但是这个方法还是有一个严重的问题：随着资源的增多，“词条”或者说是“特性”终究会越来越多，永无止境，变得难以检索且臃肿。</p>
+<p>我有一个不成熟的解决方案，说出来仅作为参考。现在是云同步十分流行的二十一世纪，如果我们能够使用一个中心服务器，将所有的“词条”都在其中进行同步，那么词条就可以实现快速检索。这个方案的问题在于把本来已经去中心化的规则再次与中心化的服务器连接到了一起，没有实现彻底的去中心化，所以我也一直不满意。再加上租用中心服务器的费用可能难以承担，所以一直没有实现的可能。</p>
+<p>写到这里，我已经无话可说了，对于无限流TRPG我想说的都已经说完了。我本人更为倾向于去中心化，但这也只是我的主观意见，本文中提到的不同模式并没有优劣之分，希望各位能够亲身体验这些规则后再做出属于自己的判断。</p>
+<p>还是老样子，如果你想要自己的规则有有更好的平衡性的话，请记住：</p>
+<p><strong><font color=red>你的眼睛会欺骗你，你的耳朵会欺骗你，你的经验会欺骗你，你的想象力同样会欺骗你。</strong></p>
+<p><strong>但数学不会。</font></strong></p>
 
     </div>
 
@@ -296,7 +292,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.maddestroyer.xyz/2020/05/24/trpg-1/" title="【给各位规则作者】为什么我不喜欢百分比">https://blog.maddestroyer.xyz/2020/05/24/trpg-1/</a>
+    <a href="https://blog.maddestroyer.xyz/2020/05/24/Jigsaw-3/" title="【给各位规则作者】强度黑箱与数值平衡">https://blog.maddestroyer.xyz/2020/05/24/Jigsaw-3/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -327,6 +323,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/TRPG/" rel="tag"># TRPG</a>
+              <a href="/tags/%E6%97%A0%E9%99%90%E6%B5%81/" rel="tag"># 无限流</a>
           </div>
 
         
@@ -334,10 +331,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/05/24/trpg-2/" rel="next" title="【给各位规则作者】在游戏里追求真实是不是搞错了什么">
-      【给各位规则作者】在游戏里追求真实是不是搞错了什么 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/05/24/Jigsaw-2/" rel="prev" title="【给各位规则作者】在游戏里追求真实是不是搞错了什么">
+      <i class="fa fa-chevron-left"></i> 【给各位规则作者】在游戏里追求真实是不是搞错了什么
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/29/Jigsaw-4/" rel="next" title="【给各位规则作者】规则书排版与人物卡">
+      【给各位规则作者】规则书排版与人物卡 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -397,6 +397,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么说审核是件麻烦事？"><span class="nav-text">为什么说审核是件麻烦事？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎么平衡？"><span class="nav-text">怎么平衡？</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -412,7 +413,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -425,7 +426,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
