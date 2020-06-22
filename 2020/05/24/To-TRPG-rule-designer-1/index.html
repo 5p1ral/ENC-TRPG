@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.maddestroyer.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="我是个闲人，每天在各个跑团群里闲逛，准确来说，应该是无限流跑团群。一般来说，只要是公开招人的无限流跑团群，群里一定会有我的身影。每当进到一个新的跑团群，我第一时间都是翻群文件——没错，我是在寻找规则书。在这个过程中，我看到了一些所谓的“自创”规则作者，背景故事写得一坨稀烂，游戏机制照抄DND和COC（注意我所说的“机制”并不是简单的掷骰），强度平衡做得离谱，跑起团来疯狂口胡，一出什么问题就开始声称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【给各位规则作者】为什么我不喜欢百分比">
+<meta property="og:url" content="https://blog.maddestroyer.xyz/2020/05/24/To-TRPG-rule-designer-1/index.html">
+<meta property="og:site_name" content="Spiral&#39;s Blog">
+<meta property="og:description" content="我是个闲人，每天在各个跑团群里闲逛，准确来说，应该是无限流跑团群。一般来说，只要是公开招人的无限流跑团群，群里一定会有我的身影。每当进到一个新的跑团群，我第一时间都是翻群文件——没错，我是在寻找规则书。在这个过程中，我看到了一些所谓的“自创”规则作者，背景故事写得一坨稀烂，游戏机制照抄DND和COC（注意我所说的“机制”并不是简单的掷骰），强度平衡做得离谱，跑起团来疯狂口胡，一出什么问题就开始声称">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-24T08:09:12.000Z">
+<meta property="article:modified_time" content="2020-06-10T13:42:51.593Z">
+<meta property="article:author" content="Spiral">
+<meta property="article:tag" content="TRPG">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.maddestroyer.xyz/2020/05/24/To-TRPG-rule-designer-1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【给各位规则作者】为什么我不喜欢百分比 | Spiral's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Spiral's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Spiral's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Something about TRPG.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/24/To-TRPG-rule-designer-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-spiral.gif">
+      <meta itemprop="name" content="Spiral">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spiral's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【给各位规则作者】为什么我不喜欢百分比
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-24 16:09:12" itemprop="dateCreated datePublished" datetime="2020-05-24T16:09:12+08:00">2020-05-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-10 21:42:51" itemprop="dateModified" datetime="2020-06-10T21:42:51+08:00">2020-06-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%B7%91%E5%9B%A2%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">跑团杂谈</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>我是个闲人，每天在各个跑团群里闲逛，准确来说，应该是无限流跑团群。一般来说，只要是公开招人的无限流跑团群，群里一定会有我的身影。每当进到一个新的跑团群，我第一时间都是翻群文件——没错，我是在寻找规则书。在这个过程中，我看到了一些所谓的“自创”规则作者，背景故事写得一坨稀烂，游戏机制照抄DND和COC（注意我所说的“机制”并不是简单的掷骰），强度平衡做得离谱，跑起团来疯狂口胡，一出什么问题就开始声称自己的规则是“口胡规则”，“请玻璃心玩家离开”。</p>
+<p>我不知道大家对于“规则书”的定义是怎么理解的，反正我的理解是这样：<strong>规则书上描述的是完整的、精确的规则，一个玩家应该通过阅读规则书就能够完全地了解这款TRPG的游戏机制、游戏背景、游戏流程。</strong>有些人在规则书里写道：“强度交给群管理员就够了，你不需要知道。这些背景故事，群主知道就够了，你们不需要知道。”那么请问这些规则书有什么实际的作用吗？玩家看了之后对于整个游戏机制就是一脸懵逼，最后还是跟着主持人的说法走，连主持人有没有遵守规则都无从得知。这种规则书在我看来就像是个霸王条款，我从全文里只看出了四个大字——都听我的。</p>
+<p>我希望各位去仔细思考一个问题：<strong>TRPG为什么需要规则？</strong> TRPG有三个要素，T、RP和G，<strong>“桌面”、“角色扮演”和“游戏”</strong>。“桌面”这个要素决定了TRPG的数值无法使用复杂的运算系统，这也是本文要重点阐述的部分。“角色扮演”是TRPG的核心要素，或者说是TRPG最具有吸引力的一个要素，这点众多大神都已经发表过自己的见解。但这第一点并不是本文的重点，我就不多说明了。（关于这一点我觉得隔壁约书亚的帖子值得一看）“游戏”则使TRPG有别与一般的角色扮演，也就是俗称的“过家家”，这点也是本文重点阐述的部分。</p>
+<p>这里不得不提到<strong>“口胡”</strong>这个概念，有些人可能是认为口胡是“无视规则”，是“为所欲为”，但是实际上口胡只是将规则在游戏中的比重放低了而已，即<strong>“轻规则”</strong>。举个例子，正常团，也就是某些人认为的“规则团”（他们可能是觉得把口胡和规则对立就能够表现出自己开的也是个团？），PC需要做一项动作时，可能主持人第一时间想到的就是“掷个骰子”，然后依靠骰子的结果来决定本次行动是否成功；而在口胡团里，主持人可能会通过直觉来判定本次行动是否成功（也就是俗称的心判）。也就是，口胡团只是忽略掉了大量的次要掷骰，从而得到了较高的自由度与扮演流畅性，但是在遇到一些重要的剧情节点的时候，主持人一般还是会让你掷骰的。</p>
+<p>另外，再说下一下<strong>“半口胡”</strong>这个奇怪的概念吧。这个词汇不知道是谁先提出来了，某些人就这样自诩待在“口胡”与“规则”的中间，从而让自己比“口胡”高上一等，又能比“规则”多一些自由度。<strong><font color="#FF0000">这根本就是在扯淡。</font></strong>规则就是规则，口胡就是口胡，哪有什么半规则半口胡的古怪玩意儿。只要你掷骰的比重比正常的团少，你就是口胡了。至于那些完全不掷骰，或者说跑了一个好几天的团才有两三个掷骰的，对不起，您这不叫口胡，您要么叫做文字游戏，要么就叫做语戏或者演绎。说实话，“口胡”这个词可能也给了萌新一些刻板印象，认为口胡就是张口就来，不需要考虑任何规则，我希望以后再提及口胡相关的团时，能使用更为准确的<strong>“轻规则”</strong>来指代。</p>
+<p>本文面向的，就是这些觉得《无限恐怖TRPG》太难了，或者说是不满无限恐怖继承的WOD机制与DND机制，又脑门一拍，就开始搞所谓的“原创”规则的朋友们。首先明确的一点是：我并不是在打压新人，也并不是不尊重你的梦想。（甚至我自己也是个自创规则的参与者）我已经尽量地在本文中避免主观情绪的出现，力求做到客观与准确。</p>
+<p>回到最开始的问题:<strong>TRPG为什么需要规则？</strong></p>
+<p>我们不妨进一步问：<strong>游戏为什么需要规则？</strong></p>
+<p>没有为什么，游戏就需要规则。或者说，没有规则的不叫做游戏。</p>
+<blockquote>
+<p>游戏是一种基于物质需求满足之上的，在一些特定时间、空间范围内遵循某种特定规则的，追求精神世界需求满足的社会行为方式，但同时这种行为方式也是哺乳类动物或者灵长类动物所需的一种降压减排的方式，不管是在出生幼年期，或者发育期，成熟期都会需要的一种行为方式。游戏是一种基于物质需求满足之上的，在一些特定时间、空间范围内遵循某种特定规则的，追求精神世界需求满足的社会行为方式，但同时这种行为方式也是哺乳类动物或者灵长类动物所需的一种降压减排的方式，不管是在出生幼年期，或者发育期，成熟期都会需要的一种行为方式。</p>
+</blockquote>
+<p>这是百度百科对于游戏的定义。</p>
+<p>我相信大伙如果小时候玩过过家家或者类似的游戏的时候，肯定会跟自己的小伙伴发生点争执。比如你想要当爸爸，想要你的小伙伴当儿子；你的小伙伴想要你当儿子，他来当爸爸。最后你们是怎么解决的？可能是打了一架，也有可能是石头剪刀布或者其他，总之，谁打赢了谁就当爸爸，这就是一个简单的规则了。（在现如今的TRPG游戏中，你也可以试试跟主持人进行肉搏来判定行动是否成功。当然，我个人并不保证你的人身安全。）</p>
+<p>再举个例子，小时候还有个常见的游戏。我“诅咒”你，你“反弹”我，我“反弹你的反弹”，你再“禁止反弹”。为什么这种幼稚的游戏永无止境，因为它没有办法判定谁赢谁输，所以你们就可以一直这样套娃下去。</p>
+<p><strong>简单来说，规则就是用来判定谁输谁赢的。</strong></p>
+<p>说完了规则的问题，我们终于能够进入这篇文章的正题了：<strong>为什么我不喜欢百分比？</strong></p>
+<p>这里我再提出一个问题：<strong>什么样的游戏数值运算具有百分比？</strong></p>
+<p>答案是CRPG。巫师、上古卷轴、黑暗之魂，这些游戏的数值运算都运用到了数量庞大的百分比。因为它们是CRPG，它们无需考虑运算的问题——在一切CRPG里，运算都是由计算机完成的，玩家只需要游玩就行了。游戏厂商就是游戏的主持人，而计算机是骰子。在CRPG里的一切掷骰都不需要你来操心，你只需要进行攻击的动作，伤害数值自然而然的就会在敌人的身上跳出来，而你对其中的运算机制一无所知。游戏厂商一般也不希望你们知道它们的游戏机制，除非你专门花钱去买它们的设定集（有的游戏甚至设定集里只有原画），毕竟一旦玩家知道了这些数值运算与游戏机制，这个游戏的战斗在玩家眼里就已经“没有挑战性”了（这里说个冷知识，只狼的忍杀其实不是必杀伤害，而是你普攻伤害的600倍。）</p>
+<p>这就反映出<strong>CRPG</strong>和<strong>TRPG</strong>的一个显着区别了。</p>
+<p>TRPG首先是个社交游戏，玩家和主持人的目的本质上是一致的，就是要一起讲述一个好故事，并在这个过程中收获快乐。（我是不太懂那些处处刁难玩家的主持人都是什么心态）在跑团圈里有一句很经典的话：<strong>“先做朋友，再跑团”</strong>如果你和主持人根本就谈不来，那么真的没必要一起玩游戏。</p>
+<p>为了能够在桌面上进行游戏，TRPG的规则复杂度其实已经被限定了一个上限。（除非哪一天人类的大脑进化到可以秒算三位数乘除法，要不就别指望复杂度提升了）你总不能丢个骰子先乘以一个系数再加上一大堆附加值然后再进行一次有余数的除法吧，那样谁还想玩啊，整局游戏就光掷骰了。由于复杂度被钉死了，TRPG的数值就难以使用一系列的数学手段使其平衡（例如LOL的护甲机制在TRPG里压根是想都不敢想）。</p>
+<p>当然，在这个社交网络异常繁荣的时代，TRPG又演变出了一个新的形式——也就是我们俗称的网团。网团的角色卡主要借助了Excel这一工具，从而能够自动化许多运算，这也为TRPG提供了新的可能性——能否有一个新的规则，既保留了TRPG的核心三要素，又能够借用计算机的计算能力来实现数值的平衡？我没法断定这种新型的规则到底是好是坏，也不能够断定这种规则在将来是否能够发展起来，甚至不知道这种新型的RPG游戏是否会有一个新的名字（毕竟他们已经脱离了桌面的形式）。但是我可以说，在目前的环境下，试图复杂化运算绝对是一种吃力不讨好的事情。</p>
+<p>回到最初的话题，很多“原创”规则书作者会用百分比机制来表现一个技能或者一个能力有多么的强大，但是随着游戏体量的增大，百分比反倒会成为一个巨大的问题。我不喜欢百分比的原因就是如此，一旦百分比入侵了你的规则，平衡性基本上就成为一个笑话了。</p>
+<p><strong><font color="#FF0000">相信我，百分比对于知识水平较低的人来说，反而会对平衡性造成打击。</font></strong></p>
+<p>什么？你说你知识水平很高？那你能比得上一个公司吗？</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Spiral 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Spiral 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Spiral
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.maddestroyer.xyz/2020/05/24/To-TRPG-rule-designer-1/" title="【给各位规则作者】为什么我不喜欢百分比">https://blog.maddestroyer.xyz/2020/05/24/To-TRPG-rule-designer-1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/TRPG/" rel="tag"># TRPG</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/24/To-TRPG-rule-designer-2/" rel="next" title="【给各位规则作者】在游戏里追求真实是不是搞错了什么">
+      【给各位规则作者】在游戏里追求真实是不是搞错了什么 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Spiral"
+      src="/images/avatar-spiral.gif">
+  <p class="site-author-name" itemprop="name">Spiral</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/spiral111" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;spiral111" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://maddestroyer.xyz/" title="https:&#x2F;&#x2F;maddestroyer.xyz" rel="noopener" target="_blank">Jigsaw's Blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://66trpg.com/" title="https:&#x2F;&#x2F;66trpg.com&#x2F;" rel="noopener" target="_blank">66TRPG</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://tieba.baidu.com/f?kw=%25C5%25DC%25CD%25C5" title="https:&#x2F;&#x2F;tieba.baidu.com&#x2F;f?kw&#x3D;%C5%DC%CD%C5" rel="noopener" target="_blank">百度跑团吧</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-spinner"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Spiral</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
