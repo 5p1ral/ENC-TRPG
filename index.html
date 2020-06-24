@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/22/How-to-be-a-goo-keeper-X-2/">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/22/How-to-made-a-TRPG-mod/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-spiral.gif">
@@ -176,7 +176,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/22/How-to-be-a-goo-keeper-X-2/" class="post-title-link" itemprop="url">跑团中KP如何控制玩家？</a>
+            <a href="/2020/06/22/How-to-made-a-TRPG-mod/" class="post-title-link" itemprop="url">【转载】如何制作TRPG模组？</a>
         </h2>
 
         <div class="post-meta">
@@ -187,7 +187,251 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-22 19:26:45 / 修改时间：20:32:01" itemprop="dateCreated datePublished" datetime="2020-06-22T19:26:45+08:00">2020-06-22</time>
+              <time title="创建时间：2020-06-22 20:52:42 / 修改时间：21:01:30" itemprop="dateCreated datePublished" datetime="2020-06-22T20:52:42+08:00">2020-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%B7%91%E5%9B%A2%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">跑团杂谈</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>作者：叶兰舟<br>链接：<a href="https://www.zhihu.com/question/386322852/answer/1140084093" target="_blank" rel="noopener">https://www.zhihu.com/question/386322852/answer/1140084093</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<p>模组创作本质上是个非常大的问题，就像“如何写好一个剧本”一样，可以写个一书架的书，绝对不是一两个问题可以写完的。所以这里只能简单地说一个概要的概要……</p>
+<p><img src="https://pic1.zhimg.com/50/v2-ee650e54d99459eb54f8ef5228f4d79d_hd.jpg" alt="img"></p>
+<h2 id="模组是什么"><a href="#模组是什么" class="headerlink" title="模组是什么"></a><strong>模组是什么</strong></h2><p>先从这个话题说起吧。本质上说，模组是给主持人的一个基本备忘录，无论如何千变万化，里面都会包含几个核心部分：<strong>数据，计划和战斗</strong>。</p>
+<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>很好理解，就是整个故事里会用到的各种信息，包括但不限于以下这些：</p>
+<ol>
+<li><strong>盟友</strong>：所有有重要剧情的友善NPC，线索的重要来源。通常来说，每个NPC需要一张人物卡，包含了性格、能力、身上的物品，以及会提供的线索等信息，也需要外貌等细节的描绘。</li>
+<li><strong>BOSS</strong>：可能有实体，或者是一个组织，甚至是一种“现象”或者“灾难”。但无论如何，这都是故事的主要推动力，给玩家压力和挑战的主要来源。</li>
+<li><strong>怪物</strong>：敌对阵营的角色，玩家压力、挑战，和收益的主要来源。怪物的数据一般来说规则书上都会有，但根据模组的设计，这可能会有很多细节的变化，包括自己做的魔改，这都要记录在信息上。</li>
+<li><strong>世界</strong>：不同的特殊世界，根据世界观，地形、气候等因素都会有巨大的变化，比如DND里的异域世界，不同阵营的外域，每个都有截然不同的世界风貌，气候和环境影响。即使是现实世界，不同国家、不同时间段，也会有很多不同的问题，比如美国20年代的禁酒令，50年代的麦卡锡主义等，都是会对世界和剧情产生巨大影响的。</li>
+<li><strong>地区</strong>：非战斗地区的信息。重要的补给、信息获取地等等，也包括了描述性的部分。特别要说的是，这块其实是新手主持人特别容易翻车的地方——除非是精心设计、用各种方式控制了玩家行动范围的模组，否则玩家（尤其是不那么合作的老油条）的行动，很容易会超出这个范围，让你精心设计的一大片区域完全派不上用场——所以哪些做得粗，哪些做得细，也是个很讲究的事儿。</li>
+<li><strong>战场</strong>：跟地区不同，战场需要专门的设计，因为会涉及到地形利用等要素。一些较为注重战斗的规则，比如DND，模组里的地城就会做得非常复杂，像是著名的retoee（重返元素神殿），里面的陷阱和机关就非常多，每个都有不同的设计。当然，很多时候战场是无法完全预设的，这就需要临时搬出来的想象力和经验了。</li>
+<li><strong>物品</strong>：关键物品的历史和信息。有时候它们是推动战役进行的核心，需要特殊处理。</li>
+<li><strong>其他</strong>：根据具体的规则不同而不同。比如DND里有一些预言类的法术，无限里有各种追溯过去或者未来的能力，应对这些能力需要有专门的一些信息。</li>
+</ol>
+<h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>这块是模组的重点，也是它跟一般的剧本最大的不同——因为NPC是“活的”。他们有自己的思想、自己的计划，会根据玩家的行动而改变。</p>
+<p>比如一个模组，城市里出现了不明的瘟疫，而最终BOSS（一个很强的死灵法师）目的其实是要召唤某个魔鬼，在准备献祭的时候，弄出了很多事儿，导致了瘟疫的产生。他会小心城市的反应，可能会在一些地方用魔宠或者手下设置警戒，如果发现了玩家在追查他的行动，就可能会藏得更深或者主动出击试图把玩家干掉。</p>
+<p>这说起来很简单，但有几个点需要注意的：</p>
+<ul>
+<li><p><strong>联动性</strong>：一般的模组不可能、也不应该做得太复杂，将十几个NPC的行为连在一起行动。举个例子，比如你做了一个敌人的复杂反应链，打了小的惹出大的，大的上面还有个议会，每个议员都有各自的目的和想法，要吵个几百次得到一个结果，再来对付玩家……基本上没什么必要。</p>
+</li>
+<li><p><strong>玩家可见度</strong>：比较糟糕的情况，是玩家的所有行为都得不到反馈，或者隐藏在迷雾中；最有趣的情况，就是玩家的行动不断能得到回馈（当然这不是绝对的，比如有些惊悚模组，可能玩家从头到尾都看不到敌人）。</p>
+</li>
+<li><ul>
+<li>举个非常典型的例子，一个DND团，玩家要去偷袭一个匪帮，在中途的一场遭遇战后没能拦住对方的魔法传信，让对方有了准备，于是敌人的山寨就做了完全的准备，这是个很容易理解的关联性。如果玩家一路打上山，没有任何掩饰，但敌人没有任何对应的准备，这就会让人觉得世界的反馈太弱；反之，敌人内部要做了大量的反应，二当家三当家各有心思，也得让玩家看得到、事先做好铺垫才行，否则就是过度反应了。</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何创作一个模组"><a href="#如何创作一个模组" class="headerlink" title="如何创作一个模组"></a>如何创作一个模组</h2><p>我个人创作时，一般会按照这样的流程进行：</p>
+<ol>
+<li>想好“我要做一个怎么样的故事”。这是一个喜剧，还是悲剧，还是热血和拯救的故事？确定基调。</li>
+<li>这个故事是在什么时间和地点发生的？在规则书或者其他地方查到这些信息，记下来。</li>
+<li>BOSS（无论是一个实体角色，还是某个组织，亦或某个“现象”，统一用BOSS指代）会用什么方式来实现自己的目标？会会因此为此做什么准备？把对应的信息写下来。针对不同的时间和地点，BOSS的手段肯定会有一些对应的变化。</li>
+<li>为了实现这些目标，BOSS会对故事世界产生什么样的改变，会安排出哪些手下（怪物），又会让哪些NPC转变为玩家潜在的盟友？</li>
+<li>这些盟友会做什么准备？又有什么目标？是否会有怪物和盟友的互相转化？</li>
+<li>根据BOSS、怪物和盟友的目标和准备，确定玩家进入之前的初始局势。</li>
+<li>根据初始局势，推算玩家可能会在不同的时间点遇到的挑战和解决方式。节奏是否得当？是否会让玩家在很长一段时间内一直面临巨大的压力而无法缓解，或者一直遇不到挑战？</li>
+<li>最终的挑战，也就是故事的高潮部分，是怎样的？根据现在的设计，是否有趣？如果不够有意思，需要根据高潮部分，反推一下之前的故事设计。</li>
+<li>在高潮之后，除了BOSS之外，盟友和敌人会有怎样的结局？根据玩家的行动，他们的命运有了怎样的改变？</li>
+<li>回到7，重新看一遍所有挑战。是否给予了玩家足够的解法？是否让每个玩家都有了高光时刻？</li>
+<li>填充数据，修改BUG，结束创作。</li>
+</ol>
+<h2 id="一些技巧和手法"><a href="#一些技巧和手法" class="headerlink" title="一些技巧和手法"></a>一些技巧和手法</h2><p>整个故事的创作是没有捷径的，我也不敢说自己就是优秀的故事创作者；但对于玩家来说，全程80分甚至90分的团固然厉害，但印象深刻的往往是那些全程70-80，但偶然有高光时刻可以爆出90-100分的团，这里就牵扯到一些有趣的手法了。</p>
+<p><strong>根据玩家定制</strong></p>
+<p>我现在带团带得很少，很挑PC，但对应的，也会为玩家做很多细节工作——TRPG的本质还是“跟人一起玩”。在我的这个回答里，提到过一些对应的问题。</p>
+<p><a href="https://www.zhihu.com/question/264726053/answer/284841507" target="_blank" rel="noopener">如何从零开始设计一款 TRPG？</a></p>
+<p>跟一般的电影/游戏不同的是，作为强交互的社交游戏，TRPG的最大优势之一，在于这是可以为玩家专门定制的！这就需要反复的沟通和询问，来找出玩家的爽点和乐趣。不同的玩家，爽点是绝对不一样的。</p>
+<p>TRPG绝对不是主持人跟玩家的对立，而是一个双赢的过程！</p>
+<p>无论是自己创作，还是拿到了一个别人写的模组，最好都能根据自己找到的玩家，对模组进行一些修改。</p>
+<p>比如一个玩家建了一张语言和历史学家的卡，而你的模组完全都是战斗，那么这个玩家能得到乐趣吗？也会有，但他最大的优势无法得到利用，那肯定是不够爽快的。在这种情况下，你就需要至少1-2个关键情节，让他有机会能够利用自己的技能，获得其他人无法获得的信息、线索或者优势，并且（有可能）在之后的其他挑战中起到巨大的作用，那么这个玩家就会感觉到自己派上了用场，这就是他的高光时刻。</p>
+<p>比如一个玩家的角色擅长破甲，可以砍穿别人打不破的装甲，那么你就可以刻意安排一些高装甲的敌人；一个玩家喜欢扮演日本的剑客，那你就应该让他有个“两人错身而过，一刀把敌人断头”的机会。即使没有成功，也是个会让他之后很长时间，想起来都津津乐道的地方。</p>
+<p>而如果玩家的背景中有些细节，也是可以抓出来利用的点。比如这人如果卡上写着怕黑，那就给他一个在黑暗中战斗的机会——总之，需要尽可能让玩家有表演自己的机会，展现自己的“存在感”，否则这个团的体验就很难好。</p>
+<p><strong>利用场景和细节</strong></p>
+<p>想象一下，这样一场战斗：双方在空旷的房间里遭遇，对方是标准怪物模板上的怪物或者NPC，没有做任何修改，投骰开始，移动，攻击，按部就班……对于纯新手来说，没什么问题，但对于老玩家来说，就很容易昏昏欲睡。</p>
+<p>DND里有一本注明的《挑战之书》（你看光这个就可以讲个几本书），专门讲解各种战斗场景的设计，并且做了很多有趣的例子，比如一条恶龙戴着易容帽伪装成善龙，骗玩家到它身前布置任务，然后就是一口龙息……这种打破常识，意料之外情理之中的设计，就很讨巧。</p>
+<p>对于非DND的游戏来说，利用场景的细节也是很重要的。就像怪猎一样，不同的场景里有不同的地形，可以让怪物撞墙、踩陷阱、利用高台优势玩空战，TRPG里的场景也可以衍生出非常多的细节，而且这在很大程度上也是TRPG专属的。</p>
+<p>比如力量足够的玩家，可能可以撞破脆弱的墙，弄塌房子；现代背景里的玩家可以设置复杂的潜入路线、制作炸药炸开门等等，但这些很可能需要结合玩家的情况，给予一定的提示和线索（比如玩家过个对应的知识判定，或者历史判定，就会发现某个BOSS的家其实是建立在古代的建筑之上，可以通过找到以前的下水道钻进去……）</p>
+<p>而怪物的出场也需要结合场景做各种设计。“踢开门看到敌人呆在那里”是最初级的方式，很多怪物/敌人，有能力进行场景移动的，就应该尽可能设计一些让人印象深刻的出场。记得生化危机2里舔爷的出场吗？雷雨，黑夜，危机四伏的洋馆，先是在资料上看到舔爷的信息，然后走到风雨飘摇、破碎的走廊上，舔爷在窗外一闪而过！再然后才是它在天花板上悄然出现，一步步的递进，场景、怪物、剧情完美结合。TRPG里没法控制玩家的“镜头”，但通过描述，也可以达到类似的效果，这就只能参考各种文学著作和影视/游戏来看了。</p>
+<h2 id="结语和参考"><a href="#结语和参考" class="headerlink" title="结语和参考"></a>结语和参考</h2><p>如最初所说，这方面的学问实在太多了，不同TRPG下的设计细节和深度研究，更是讲也讲不完的，我也不敢说自己就精通这门学问，在这里只能分享一些基本的流程和心得，希望对新手主持人们能有所帮助。</p>
+<p>分享一些参考书和资料：</p>
+<h3 id="故事方面——"><a href="#故事方面——" class="headerlink" title="故事方面——"></a>故事方面——</h3><p>《千面英雄》：很多神话故事的原型和流程，星战基本上就是这套路。</p>
+<p>《救猫咪1-3》：编剧入门书，调整故事节奏很重要。</p>
+<p>《故事：材质结构风格和银幕剧作的原理》：非常厉害的一本书，从各个角度讲解了“故事”本身是怎么创作的。但可能有些地方偏专业。</p>
+<p>《美剧编剧入门》：可以研究一下美剧的结构，很有用。</p>
+<h3 id="神秘学方面——"><a href="#神秘学方面——" class="headerlink" title="神秘学方面——"></a><strong>神秘学方面——</strong></h3><p>《巫术的一般理论 献祭的性质与功能》：对巫术的一些解构，神秘学方面的入门书籍之一</p>
+<p>《金枝》：神秘学和民俗，COC系列其实需要看一下，能学到很多技巧</p>
+<h3 id="其他——"><a href="#其他——" class="headerlink" title="其他——"></a>其他——</h3><p><a href="https://www.zhihu.com/question/36775625" target="_blank" rel="noopener">龙与地下城的有趣/经典/设计巧妙的模组？</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/22/Chateau-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-spiral.gif">
+      <meta itemprop="name" content="Spiral">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spiral's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/22/Chateau-2/" class="post-title-link" itemprop="url">【转载】约书亚的跑团杂谈02：主持人的义务</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-22 20:39:52 / 修改时间：20:54:01" itemprop="dateCreated datePublished" datetime="2020-06-22T20:39:52+08:00">2020-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%B7%91%E5%9B%A2%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">跑团杂谈</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>首发于<a href="https://66trpg.com/forum.php?mod=viewthread&tid=897" target="_blank" rel="noopener">66TRPG</a>论坛，转载请注明出处。</strong></p>
+<p><em>尽管大多是一些正确的废话，但是还是想讲出来。尤其是当在圈子里，连明白这些“废话”都能让人感到优越的时候。</em></p>
+<p>上一期我们在明确跑团行为的定义上做了一些讨论。不过显然的是，明确定义并不能确保你一定就能让玩家们变得开心起来——就像你背了公式也不一定能做出高数题。</p>
+<p>我接下来的若干期杂谈将围绕“如何让跑团变得令所有人都满意”展开。按照惯例，我们要在谈权利之前先明确义务。这一期，我们就先从“主持人的义务”开始谈起。</p>
+<p><strong>我认为，主持人的义务是围绕“预先承诺”展开的。</strong></p>
+<p>在游戏设计中，“游戏对玩家的预先承诺”是一个常常被提起的词语。譬如说，一个游戏叫做《刺客信条》，那么至少“Assassin”的元素就要体现在游戏之中；同理，前作的风格也会成为预先承诺。这种预先承诺的重要性体现在很多很多地方，比如说市场营销或者口碑塑造等方面，但它最根源的性质还是在于<strong>对这种预先承诺的兑现与否能够在相当大的程度上决定玩家觉得这次游玩经历值不值得</strong>这一点上。拿游戏举例的话，如果新出了一款游戏叫《GTA6》，但是这个游戏却是个和《白色相簿》（我对这两款游戏无意冒犯，这只是举例）一样的AVG，那么哪怕这款游戏做到了AVG游戏的极限，剧情能把诺贝尔文学奖、普利策奖、布克奖什么什么的通通拿个遍，它也会饱受批评。因为当玩家们听到“GTA”三个字母的时候，他们心中所想的绝对不会是一款视觉小说。近年来的《辐射4》和《最后生还者2》所经历的差评潮很大程度上也要归结于它们没有兑现玩家们想要的那个“预先承诺”。</p>
+<p>说回跑团，这个预先承诺很大程度上体现在两个地方：我们所选用的规则和我们的团前介绍（或者是开团公告）。比如说，当我们选用COC规则，玩家们期待的，至少一定是一个有调查、探索未知等要素的团；而如果你的COC团里面全是没有铺垫的战斗或者直接开诚布公地说完所有规则然后大家开始狼人杀，那玩家们理所应当地会认为你没有兑现预先承诺。同理，如果你说你要带一个DND的大冒险，结果带出来的是一个推理密室，那玩家们当然也会有怨言。</p>
+<p>预先承诺很多时候并不仅仅是一种负担，兑现它所能带来的玩家体验以及这种承诺本身的选择作用都会让你明白这一切值得你为之付出心血。当你写到“这是一个硬核历史团”的时候，历史小白当然会望而却步，而对这种风格的团有着明确需求的玩家则会带着鲜明的目的前来；另一方面，这群有着明确需求的玩家们也比不抱任何期待的玩家更容易在需求得到满足后，拍着桌子大喊：“不虚此行啊！” 一个想吃牛排的人，他嘴里的牛排，一定比吃什么都可以的人嘴里的牛排更香。</p>
+<p><strong>所以，当你将要扮演一个主持人的时候，你心中必须要明确三个问题的答案：</strong></p>
+<p><strong>1、你给予玩家的预先承诺是什么？</strong></p>
+<p><strong>2、玩家们清楚你所给出的预先承诺吗？</strong></p>
+<p><strong>3、你能够兑现你所给出的预先承诺吗？</strong></p>
+<p>第三个问题其实最难以回答。心有余而力不足，其实是件非常常见的事情，大家都不例外。你问我要怎么样才能保证做到？那我也确实不能保证。你的承诺永远也只会是你自己的事情。我将在接下来的杂谈中详细讲讲我自己是怎样兑现我自己给出的承诺的，希望能对正在读这篇杂谈的你有所帮助。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/22/How-to-be-a-good-keeper-X-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-spiral.gif">
+      <meta itemprop="name" content="Spiral">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spiral's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/22/How-to-be-a-good-keeper-X-2/" class="post-title-link" itemprop="url">【转载】跑团中KP如何控制玩家？</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-22 19:26:45 / 修改时间：20:35:28" itemprop="dateCreated datePublished" datetime="2020-06-22T19:26:45+08:00">2020-06-22</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -376,7 +620,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-22 15:38:35 / 修改时间：19:47:47" itemprop="dateCreated datePublished" datetime="2020-06-22T15:38:35+08:00">2020-06-22</time>
+              <time title="创建时间：2020-06-22 15:38:35 / 修改时间：21:04:00" itemprop="dateCreated datePublished" datetime="2020-06-22T15:38:35+08:00">2020-06-22</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -495,7 +739,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-22 20:32:02" itemprop="dateModified" datetime="2020-06-22T20:32:02+08:00">2020-06-22</time>
+                <time title="修改时间：2020-06-22 20:55:56" itemprop="dateModified" datetime="2020-06-22T20:55:56+08:00">2020-06-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -543,7 +787,7 @@
 <p>对付这种玩家往往我的手段会比较温和，通过一点点的诱导，比如一个让对方拿捏不准的暗骰，再加上一点点的暗示，比如一句非常富有引导意味的语言<font color=red>“那里什么也没有，没有！”</font>，再加上对故事的一点点改动。</p>
 <p>最后在对方大动干戈的探索调查之后，换来一个玩笑一般的结局（“啤凉钟吊”）。大家啼笑皆非一下，点到即止。</p>
 <p><strong>提醒到了即可，没必要你死我活。</strong></p>
-<h3 id="第二类刁民：喜欢整活的"><a href="#第二类刁民：喜欢整活的" class="headerlink" title="第二类刁民：喜欢整活的"></a>第二类刁民：喜欢整活的</h3><p>整活类型的刁民，比如<font color=red>“火车王”</font>或者是<font color=red>“移动军火库”</font>又或者是<font color=red>“我要潜行偷窥女npc洗澡……我要潜行偷窥男npc洗澡！”</font>甚至是<font color=red>“18岁精通三国语言擅长六种学科能够徒手制造炸弹但是在危机面前不动声色只想安安静静当个普通人的”（说的是谁看到了请自行面壁），和整活玩家还是有些不同的。</p>
+<h3 id="第二类刁民：喜欢整活的"><a href="#第二类刁民：喜欢整活的" class="headerlink" title="第二类刁民：喜欢整活的"></a>第二类刁民：喜欢整活的</h3><p>整活类型的刁民，比如<font color=red>“火车王”</font>或者是<font color=red>“移动军火库”</font>又或者是<font color=red>“我要潜行偷窥女npc洗澡……我要潜行偷窥男npc洗澡！”</font>甚至是<font color=red>“18岁精通三国语言擅长六种学科能够徒手制造炸弹但是在危机面前不动声色只想安安静静当个普通人的”</font>（说的是谁看到了请自行面壁），和整活玩家还是有些不同的。</p>
 <p>这个不同主要是要看团中搞事的玩家有多少，是所有人都在谨慎调查只有一个玩家开火车？还是整个团队跟吃了炫迈一样冲冲冲根本停不下来？<strong>一般对于后者而言，个人的行为倒也算不上刁民，只能说整个团队的团风比较魔性，比较狂欢。</strong>所以这里我们只认为前者算是刁民。</p>
 <p>很多时候从情节上看，让这个喜欢整点活的玩家因为自己的胡乱操作而送命是很符合逻辑的处理方式，甚至更进一步这可能会因为他一个人的奇葩操作让整个队伍一波血崩。但我还是觉得这么做似乎不妥——要么太过笼统，要么太过苛刻。</p>
 <p>通常我更喜欢用一种折中的方式，让全队为了他的莽撞而陷入危险之中，但仅仅只是危险。通过设置一些惊险的场景来迫使整个团队为了生存挣扎一段时间，最后通过一种“幸运”（其实是精心策划好的）的办法最后脱离险境。</p>
@@ -800,7 +1044,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/11/How-to-be-a-goo-keeper-3-3/">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/11/How-to-be-a-good-keeper-3-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-spiral.gif">
@@ -814,7 +1058,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/11/How-to-be-a-goo-keeper-3-3/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 情节与场景篇（下一）</a>
+            <a href="/2020/06/11/How-to-be-a-good-keeper-3-3/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 情节与场景篇（下一）</a>
         </h2>
 
         <div class="post-meta">
@@ -1432,7 +1676,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/01/How-to-be-a-goo-keeper-3-2/">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/01/How-to-be-a-good-keeper-3-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-spiral.gif">
@@ -1446,7 +1690,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/01/How-to-be-a-goo-keeper-3-2/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 情节与场景篇（中）</a>
+            <a href="/2020/06/01/How-to-be-a-good-keeper-3-2/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 情节与场景篇（中）</a>
         </h2>
 
         <div class="post-meta">
@@ -1463,7 +1707,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-22 20:32:08" itemprop="dateModified" datetime="2020-06-22T20:32:08+08:00">2020-06-22</time>
+                <time title="修改时间：2020-06-22 20:35:42" itemprop="dateModified" datetime="2020-06-22T20:35:42+08:00">2020-06-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1762,7 +2006,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/31/How-to-be-a-goo-keeper-X-1/">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/31/How-to-be-a-good-keeper-X-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-spiral.gif">
@@ -1776,7 +2020,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/31/How-to-be-a-goo-keeper-X-1/" class="post-title-link" itemprop="url">【转载】在跑团中KP应该如何进行描写？</a>
+            <a href="/2020/05/31/How-to-be-a-good-keeper-X-1/" class="post-title-link" itemprop="url">【转载】在跑团中KP应该如何进行描写？</a>
         </h2>
 
         <div class="post-meta">
@@ -1980,7 +2224,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/31/How-to-be-a-goo-keeper-3-1/">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/31/How-to-be-a-good-keeper-3-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-spiral.gif">
@@ -1994,7 +2238,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/31/How-to-be-a-goo-keeper-3-1/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 情节与场景篇（上）</a>
+            <a href="/2020/05/31/How-to-be-a-good-keeper-3-1/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 情节与场景篇（上）</a>
         </h2>
 
         <div class="post-meta">
@@ -2176,355 +2420,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/31/How-to-be-a-goo-keeper-2-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-spiral.gif">
-      <meta itemprop="name" content="Spiral">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Spiral's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/31/How-to-be-a-goo-keeper-2-3/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 招募与审查篇（下）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-31 11:40:42" itemprop="dateCreated datePublished" datetime="2020-05-31T11:40:42+08:00">2020-05-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-22 20:31:20" itemprop="dateModified" datetime="2020-06-22T20:31:20+08:00">2020-06-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%B7%91%E5%9B%A2%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">跑团杂谈</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>原作者：问号<br>原文地址：<a href="https://www.bilibili.com/read/cv5138446" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5138446</a></p>
-</blockquote>
-<p>书接上文，现在让我们继续讨论这个话题——身为KP，与玩家之间开团前需要达成什么样的共识，以及我们应该如何审核玩家提供的信息。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200622203012.webp" alt=""></p>
-<center>第二章</center>
-
-<br/>
-
-<p>可喜可贺，我们终于谈到了整个列表中最后一项了，KP理应在开团之前，向玩家提供有关你将要开的故事的多少情节。</p>
-<p>在讨论这个话题以前，不妨让我们先来回想一下在我们跑团的经历中，是否曾遇到过以这样的开场为始的故事：</p>
-<ul>
-<li><p>经历了一天工作的繁忙之后，你匆匆的睡去——</p>
-</li>
-<li><p>你走在路上，突然——</p>
-</li>
-<li><p>你从梦中(昏迷中）醒来，这个时候你发现——</p>
-</li>
-<li><p>你路过某个地方的时候，不经意间发现——</p>
-</li>
-</ul>
-<p><strong>不可否认</strong>，让故事通过<strong>梦境、幻觉、突然发生的事故或者是角色的处境突然发生变化</strong>等毫无预兆的开始似乎也有着自己的乐趣。但我们更应意识到故事以这样的形式展开的<strong>风险</strong>。</p>
-<p>最直接的风险就是<strong>角色难以融入剧情</strong>。很多时候我们会发现玩家的角色会有着鲜明的特点，这些特点有时会为故事的发展增添色彩，但有时也会让角色与背景整体显得格格不入，又或者是令角色的行为没有合理的动机。甚至对于一些重视角色扮演的玩家而言，<strong>角色的设定甚至反而会对故事剧情产生阻碍</strong><font color=green>（我们并非要否决玩家过度带入角色。但我们更应认识到，即使是玩家带入角色，也<strong>不应因此破坏游戏过程或他人游戏体验</strong>）</font>。</p>
-<p>而避免这种矛盾发生的关键因素便是<strong>玩家在创建角色时应当回避可能发生的分歧</strong>。</p>
-<blockquote>
-<p>“哦，我的上帝，你怎么能要求一个环保主义者去烧毁一片树林？”</p>
-</blockquote>
-<p>除此之外，这么做还有这另一个风险——<strong>玩家难以代入角色</strong>。我们应当理解，玩家对于一个角色的扮演往往处于三个方面：逻辑、想象、同情与移情。而无论是哪一种都不免要以一定的信息为基础（<font color=green>这里的信息也包含现实中的真实经历，因此将故事与现实相关联往往也对角色扮演有所促进）</font>。而一旦玩家陷入了情报不足的境地，便很容易陷入难以代入角色，不知道该做什么的地步了。</p>
-<p>至此我们不难看出，虽然以一个突发状况为基础展开的故事也有着属于自己的魅力，但在<strong>很多时候</strong>（注意，是很多，不是全部）我们更应该处于故事的合理性或是玩家的代入感而选择让事件发生的更为缓和一点。<strong>在故事开始之前便提供一部分情报</strong>便是很好的选择。<font color=green>（除此之外我们还可以通过导入、象征性的暗示等其他方式进一步缓和事件）</font></p>
-<p>那么我们应当在开团之前为玩家提供什么样的信息呢？</p>
-<ol>
-<li><p><strong>对于故事背景的主观认知</strong>（<font color=green>这里的主观指玩家角色的主观</font>）：角色对一个NPC的认知、角色对于一个小镇或者城市的认知、角色对某个事件早期调查的结果的认知等。</p>
-</li>
-<li><p><strong>对于故事背景的客观表述</strong>：一份报纸上的新闻报导、电视上的新闻、某个权威机构发表的报告或演讲等。</p>
-</li>
-<li><p><strong>角色所接收到的象征、暗示</strong>（<font color=red>慎重使用</font>）：一次或者初次神秘的梦境、幻觉或是幻听、一些耸人听闻的都市传言、甚至可以是一个怪异的物品或者是一些怪异的事件等。</p>
-</li>
-<li><p><strong>角色介入事件的理由</strong>：来自某个朋友的委托、被卷入到某个案件或者事件之中、角色希望一次旅行或者需要见到某个角色、一封信件等。</p>
-</li>
-</ol>
-<p><strong><font color=red>将一部分信息在开团之前便放出来，并倡导你的玩家在车卡的时候便为自己的角色找到一个介入事件的动机，更进一步则是让你的角色融入故事之中。</font><font color=green>（确切的说是为玩家提供基本的情报，以便于玩家在车卡的时候为自己的角色添加动机）</font></strong></p>
-<p>我们在开团前提供的所有的信息本质上是为了<strong>故事的进一步展开进行铺垫</strong>，而非故事本身。因此我们在开团前提供的信息最好<font color=red>略带或者少含有</font>与故事的发展切实相关的情报。这部分的情报能够玩家的角色可以以一种合理的方式融入剧情之中即可。</p>
-<hr>
-<p>现在，我们讨论完了招募信息列表上的所有内容，在这个过程中我们不难看出招募信息的本质其实是<strong>KP与PL之间的对于非情节因素的交流</strong>。也可以理解为，KP做出一个要求的列表，玩家根据自己能否或者愿否接受这些要求来选择是否加入团中。（<font color=green>合理的开团模式是<strong>先备团后招人</strong>。一旦陷入了先有玩家再凑团的地步，很容易以为缺失了这一步而引发非情节矛盾。</font>）</p>
-<p>是的，招募最开始的选择权要交给玩家，让玩家来选择是否加入团中并创建角色。而在此之后的第二次选择便是由KP来主导，由KP审核并最终决定是否要接受玩家以及玩家的角色。这也就是我们通常说的——审卡。</p>
-<h3 id="审核角色——让KP做决定"><a href="#审核角色——让KP做决定" class="headerlink" title="审核角色——让KP做决定"></a>审核角色——让KP做决定</h3><p>关于角色的建立与审核的重要性想必无须多言大家也能理解，<strong>角色是故事的枢纽，严格的对角色进行就是对故事顺利进行的最有力的保障</strong>。而每个KP对于如何审卡往往都有着自己的方法和标准。这些方法没有对错优劣之分，只有适合自己或者不适合自己的区别。在接下来我将会介绍一下我个人的审卡流程以供参考。</p>
-<p><strong><font color=green>重申，审卡不分优劣，仅作参考。</font></strong></p>
-<h5 id="第一步、检查数值"><a href="#第一步、检查数值" class="headerlink" title="第一步、检查数值"></a>第一步、检查数值</h5><p>顾名思义，检查数值的含义便是检查玩家的属性与技能的数值是否符合规则书以及你所限制的范围的要求。<font color=red>如果这一步出现错误，这代表了你的玩家可能对规则书并不熟悉，或没有认真阅读完你的审卡要求。</font></p>
-<p>值得注意的是，在检查数据的过程中对于角色过高（或过低）的<strong>属性</strong>以及<strong>技能</strong>（<font color=green>一个高数值的技能往往比属性更能为角色带来特殊的地位，而KP应该学会善于在团中抓住这些特点用以塑造角色形象</font>）需要进行留意。<strong>通常我会将这些同样视为角色的特点之一。</strong>KP可以简单记录下这些特点，以便于接下来的审核以及在之后的故事中使用。</p>
-<p>（<font color=green>在这一步KP可以根据角色的特点来进行一些约束，比如你可以要求一个两米三的大汉因为太壮不能乘坐汽车.jpg</font>）</p>
-<p>除此之外，检查数据同样也应注意检查玩家是否能够满足故事的关键判定（<font color=green>还记得我们在第一章里提到的要准备的列表吗</font>）。KP可以对这些关键判定的成功概率进行一次预估，如果成功率过低，那么KP需要考虑是否要求玩家对角色进行修改或KP直接对模组流程进行修改。</p>
-<h5 id="第二步、检查物品、道具"><a href="#第二步、检查物品、道具" class="headerlink" title="第二步、检查物品、道具"></a>第二步、检查物品、道具</h5><p><strong>同样顾名思义，检查你的玩家的角色都带了啥。</strong>这一步的重要性无需多提，想必大家平时也看了不少相关的笑话。</p>
-<p><img src="https://i0.hdslb.com/bfs/article/669f4ba3ad6223aeadd59e4c4f33445dce503e5a.png@1280w_906h.webp" alt=""></p>
-<center>当KP说这个团可能涉及一点战斗时</center>
-
-<p>检查玩家物品时，KP要<strong>确保玩家带的每样东西你都能认识并理解其功能</strong>（<font color=green>比如玩家带了某些有着实质性功能的书籍、某些你所不认识的化学制剂等</font>）。如果出现了KP所不了解、不认识的东西，KP需要直接问玩家这是什么以及他能做什么（不要自行百度）并根据玩家的回答做出判断是否允许玩家保留这个东西。</p>
-<p>如果KP认可了玩家的回答，在实际团中如果因此产生矛盾，以玩家在此时的答复为准。你也可以根据这个答复拒绝一切超出了这个答复所能容纳的范围的功能。</p>
-<p>除此之外，KP还应该在这一步<strong>检查玩家所持有的物品的合理性</strong>。（<font color=green>最简单的例子便是枪械</font>）。如果出现了玩家携带有不合理的物品（<font color=red>经济能力上的不合理、行为上的不合理</font>）时，你需要对玩家提出问题，由玩家根据自己的卡做出解释或者删除相应的物品。</p>
-<p><strong><font color=red>复杂的物品对于玩家而言代表了更多的行动选择</font></strong>，对于KP则是需要处理更多的可能。但同样KP在处理行为时同样也可以基于玩家携带的某个物品做出处理。</p>
-<blockquote>
-<p>在攀爬梯子的过程中，路人甲不慎将自己的手机摔倒了地上，那里面保存着他潜入到当地黑帮里偷偷拍下的所有证据，甚至还有一副势力地图——但现在，这些全都化作乌有了。</p>
-</blockquote>
-<h5 id="第三步、检查角色的特殊履历（针对老卡）"><a href="#第三步、检查角色的特殊履历（针对老卡）" class="headerlink" title="第三步、检查角色的特殊履历（针对老卡）"></a>第三步、检查角色的特殊履历（针对老卡）</h5><p>什么是角色的特殊履历？简单说就是角色的CM来历、角色曾经的冒险、角色已有的第三类接触、角色掌握的法术、角色的理智与疯狂状态等等。<strong>对于一名角色而言，特殊履历是构成角色形象的核心，同样也是角色行为的根据。</strong></p>
-<p><strong><font color=red>KP必须了解并掌握角色的特殊履历，并要明白这些特殊履历意味着什么</font></strong>——他可能代表了在某个关键情节时角色或许已经习惯了恐惧，又或者可能会因为某个恐惧症而无法继续推动剧情。<strong>不仅如此，角色的特殊履历对于KP处理行为而言也是绝佳的反馈对象。</strong></p>
-<p><strong>特殊履历是对角色形象的深化，也同样意味着这其中蕴藏的<font color=red>危险</font>。</strong>如果遇到了KP所不理解的特殊履历，KP应对当面询问玩家这个履历的来历和意义并达成共识。</p>
-<p>我们始终要明白，复杂履历是建立在基础上的进一步提升，<font color=red>更重要的是基础。</font></p>
-<p><strong>如果你无法妥善处理一个拥有复杂履历的角色的话，<font color=red>请拒绝这张卡。</font></strong></p>
-<p><strong>如果你对一个拥有复杂履历的角色存在质疑或者无法接受的话，<font color=red>请拒绝这张卡。</font></strong></p>
-<p><strong>如果你觉得一个拥有复杂履历的角色会对你的故事或者其他玩家造成负面影响的话，<font color=red>请拒绝这张卡。</font></strong></p>
-<p><font color=green>题外话：关于履历造假，也就是我们所谓的假资深卡，我觉得这其实是一个人的人品问题。如果一开始就发现是假卡的话，建议是直接拒绝这个玩家。如果跑到一半发现是假卡的话，不要为此干扰其他玩家的正常游戏进程，就当他是个真的继续处理吧。</font></p>
-<h5 id="第四步、检查角色的背景"><a href="#第四步、检查角色的背景" class="headerlink" title="第四步、检查角色的背景"></a>第四步、检查角色的背景</h5><p>这里的角色背景包括两个部分，第一部分是玩家角色包括关键链接在内的重要关系表。第二部分则是玩家角色的背景介绍短文。</p>
-<p>首先我们要明白一个问题：玩家的角色应不应该有着丰富的背景故事和设定？<strong>答案很显然是应该。</strong>一个形象上更丰富的角色对于玩家而言更容易扮演，更容易与角色产生同情（广义）。同样也更容易约束玩家的行为不会产生先后的矛盾。</p>
-<p><strong>因此我们认为对于玩家的背景需要做出一定程度上的要求</strong>，这往往体现在对于角色的背景介绍有着一定的字数要求。因此对于角色背景的检查第一步便是检查玩家的角色背景是否满足你的预期要求，KP可以在此去提醒那些不用心构建角色的玩家们进一步细化角色背景。</p>
-<p>在检查背景的过程中，KP还需要寻找背景中<strong>角色的特点</strong>（<font color=green>幼年的经历、朋友、工作、喜爱的事物等</font>）。记下这些特点，这就像先前我们挖掘出的所有特点一样，都将会是KP在处理事件时有着更多的选择空间。</p>
-<p>除此之外，KP还应当检查玩家角色与剧情之间的关系（<font color=green size=2>如果你有提供我们前面所述的剧情简介的话</font>）还记得我们在第一章画好的<strong>人物关系图</strong>吗？现在拿起笔，把玩家的角色也添加进故事的关系之中。<strong>根据玩家在故事中的关系，你可以适当的调整剧本来让玩家的角色融入你的故事，成为故事中的一员而非故事的外来者</strong>(<font color=green>这很难，但会让你的故事更进一步</font>)。</p>
-<p><strong><font color=red size=4>最后，最重要的是，KP需要寻找玩家的角色之间是否存在矛盾与潜在矛盾。</font></strong>通过提醒或者暗示让玩家之间的矛盾在开团之前消解，而不是在跑团的过程中激发矛盾导致产生了不愉快的事情。</p>
-<h5 id="第五步、让玩家进行角色论述"><a href="#第五步、让玩家进行角色论述" class="headerlink" title="第五步、让玩家进行角色论述"></a>第五步、让玩家进行角色论述</h5><p>现在，让我们给玩家们留出一点时间。无论KP多么认真的审核，最了解玩家角色的始终还是玩家本身。不妨让玩家来进行一个自我介绍，只需要一两分钟的简单描述即可。</p>
-<p>这么做的意义是为了让玩家之间对各个角色有个最基本的了解，提前发掘一些，除此之外还能体现出玩家对于自己角色的认识程度。</p>
-<p>我们要明白，<strong><font color=red size=4>审核并非只审核玩家的角色，也包括审核玩家。</font></strong>跑团是一个包含有社交性质的游戏，<strong>这意味着玩家间必须存在相互之间的包容与理解。也意味着很多矛盾并不仅仅只会局限在游戏以内</strong>。KP的审核，<font color=red>既是审核一个角色适不适合成为这个故事的调查员，也是审核一个玩家适不适合加入到这个团的小圈子中</font>。</p>
-<p>想要成为KP一定要学会容忍和理解，但更应该懂得如何去拒绝——</p>
-<p><strong><font size=5>请学会向你无法认可的角色说拒绝，也同样请学会向你无法认可的玩家说拒绝。</font></strong></p>
-<p>【本章完】</p>
-<p>PS: </p>
-<p>水水又是一更。第二章结束了，到目前为止也是写了三万字了。</p>
-<p>不过说实话，写的有些不太满意，很多地方表达的不是很清楚。有机会可能单独写一些字数少一些的散章来讲一些细节吧……如果真的有人想看的话。</p>
-<p>下一章还没想好要怎么写，先拖几天再说。没意外的话大概会讲讲故事节奏？不过更新比较随缘就是。</p>
-<p>说起来……也不知道大家更像看些什么。</p>
-<p>虽然各个章节之间无关联，但我还是更推荐从前言《如何当好一个KP?》开始看。       </p>
-<ul>
-<li><p>全文目录：<a href="https://www.bilibili.com/read/readlist/rl219367" target="_blank" rel="noopener">https://www.bilibili.com/read/readlist/rl219367</a></p>
-</li>
-<li><p>《如何当好一个KP?》：<a href="https://www.bilibili.com/read/cv5138446" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5138446</a></p>
-</li>
-</ul>
-<p>部分图片来自网络，侵权删除。</p>
-<p>上述一切观点均为个人观点。我也只不过是个刚刚算得上脱离萌新KP阶段的玩家，如果有任何意见上的不合的话……</p>
-<p><strong><font size=5>是我错了，对不起别骂了。</font></strong></p>
-<p>以上。祝每个喜欢跑团的玩家都能遇到或成为一个优秀的Gm。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/05/31/How-to-be-a-goo-keeper-2-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-spiral.gif">
-      <meta itemprop="name" content="Spiral">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Spiral's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/31/How-to-be-a-goo-keeper-2-2/" class="post-title-link" itemprop="url">【转载】如何当好一个KP？ 招募与审查篇（中）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-31 11:40:36" itemprop="dateCreated datePublished" datetime="2020-05-31T11:40:36+08:00">2020-05-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-22 20:31:12" itemprop="dateModified" datetime="2020-06-22T20:31:12+08:00">2020-06-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%B7%91%E5%9B%A2%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">跑团杂谈</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>原作者：问号<br>原文地址：<a href="https://www.bilibili.com/read/cv5217176" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5217176</a></p>
-</blockquote>
-<p>书接上文，现在让我们继续讨论这个话题——身为KP，与玩家之间开团前需要达成什么样的共识，以及如何避免跑团中出现一系列<strong>非情节因素</strong>的矛盾与笑话。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200622203011.webp" alt=""></p>
-<center>第二章</center>
-
-<br/>
-
-<h3 id="时代-amp-背景"><a href="#时代-amp-背景" class="headerlink" title="时代&amp;背景"></a>时代&amp;背景</h3><p>这里我需要说明的是，此处我所指的时代与背景所指的是<strong>故事发生的时代的背景与故事发生的场合的背景</strong>，与模组的具体情节及内容无关。但这不仅仅只代表了KP需要单方面向你的PL提供故事的时代与背景，<strong>这也代表KP需要要求玩家也在时代背景的基础上设计自己的角色的背景。</strong><font size=2>（与模组相关的背景我们会在第十项进行讨论）</font></p>
-<blockquote>
-<p>最终钱一婉言拒接了李四交给自己审查的资深调查员角色，而使用的理由也非常简——李四的调查员是一名活跃在上个世界二十年代的美国人，并且他所掌握的语言技能中并没有汉语，但钱一这次准备的模组的背景却是发生在现代的上海。</p>
-</blockquote>
-<blockquote>
-<p>李四最终决定重新创建新的调查员角色，相应的张三和王八也放弃了刚果的医生或者日本的警察这样的角色，重修调整了自己新建立的调查员角色的国籍和语言。避免了三个调查员分别使用不同的语言、来自不同的大陆和国家，甚至连肤色都各不相同的尴尬场景出现。</p>
-</blockquote>
-<p>是的，事先交代明确时代与背景的第一个重要意义便是<strong>避免玩家们的角色与你要讲述的故事之间产生矛盾</strong>，又或者在开团时出现一系列诸如语言不通之类的意外情况（可能你会觉得这种基本的错误不可能发生，但事实上他确实发生过）。</p>
-<p>但一个明确的时代与背景的能够为我们的故事带来的好处远不止于此。时代与背景对跑团而言更重要的是能<strong><font color=red>为玩家提供来自于故事以及角色的真实感</font></strong>。通常而言，当KP选择了一个现实中真实存在的城市作为故事的背景（此处也包括以现实城市为原型所重新设定的架空城市，只要玩家通过现实能够跑团时所处的环境拥有基础的了解即可），玩家构成角色以及扮演角色进行行动时都能够<strong>依赖现实作为行为的逻辑</strong>，增加了跑团中的选择。<strong>而同样一个更真实的玩家角色设计对角色的行为也做出了引导与限制。</strong></p>
-<p>对于一个设定上出生或者工作在这座城市中的人，比起<em>“我要找一找附近有没有什么报刊，然后买一份当地的报纸看看有没有相关的报道。”</em>而言<em>“我要去路口的早餐摊上买本xx早报，然后直接翻到报纸的xx栏目看看上面有没有刊登这个事件。”</em>似乎显得更加真实一些。而KP在对这个行为进行描述中加入一些与现实相关的事件或新闻，<strong>只需一笔带过便足够让玩家意识到自己的角色是真实生活在这样的一个背景之中。</strong>（但这里要注意的是，对于与剧情无关的内容之应当停留在其表面，不能深入以免影响正常的调查节奏。而话题的选择最好选取一些你与玩家之间达成共识的并且与剧情无关的话题，以免引起玩家的错误理解。）</p>
-<p>更进一步，一个玩家所熟悉的故事背景也意味着玩家<strong>在角色构建时更加真实</strong>。你可以让玩家在背景中设定出所扮演角色的家人、同事、朋友，并且KP与PL都可以在跑团的过程中思考角色是否需要寻求这些熟人们的帮助。又或者你可以让各个玩家的角色通过背景中的某种关系相关联起来。<strong>这也往往能够解决很多情况下KP对于如何将自己手上一盘散沙的角色揉合成一个调查员团队的苦恼。</strong></p>
-<p>正如我们在讨论跑团时KP如何抉择是否使用老卡时所说，让自己的玩家使用老卡对于塑造一个更加精彩的故事而言是非常有效的手段，一个明确的背景与基于背景所建立的玩家角色的复杂关系网络甚至可以跨越某一个玩家的角色或者某一次跑团，让玩家的角色和你的NPC从模组的束缚中脱离，这将是属于你所处的圈子中每个玩家共同的宝贵财富。</p>
-<p><strong><font color=red size=5>桌面角色扮演游戏，始于角色扮演，不止于扮演角色。</font></strong></p>
-<h3 id="新卡属性选择方式"><a href="#新卡属性选择方式" class="headerlink" title="新卡属性选择方式"></a>新卡属性选择方式</h3><p>这一个条目的内容想必所有玩家与KP都能能够理解，那便是包含幸运在内玩家的九种基本属性的确认。</p>
-<p><strong>通常而言我们有三种常见方法来确定一个新角色的属性：骰掷属性、购点法、快速开桌规则。</strong><font size=2>此处我们姑且不对模组预制角色进行讨论，因为我实在难以辨别模组预设角色究竟是一个新的角色（调查员角度），还是一个资深的角色（角色本身的角度），同样对于骰掷属性的一系列可选规则修正也不进行讨论，因为全都讨论一遍实在是过于繁琐。</font></p>
-<p>各个规则的用法因人而异，不同的KP总是有着自己独特的爱好。我们不评判他们的优劣，只需要理解这样的区别即可。</p>
-<p>在讨论这个话题之前，先让我们做一个计算。除却幸运以外的八项属性中，一共有三项需要2D6+6进行确定，五项需要3D6进行确定。让我们求出这个数字的平均值再将其乘5，如果我没有算错的话，这个数字是457.5。也就是说，如果我们采取<strong>骰掷属性</strong>作为确定自己属性的方法时，这个数字（不含幸运）将会接近于457。而恰好<strong>购点法</strong>的数值便是460点，同样<strong>快速开桌规则</strong>提供给玩家用以分配的点数也是460点。</p>
-<p><em>值得注意的在7th规则书中并没有允许玩家从多次骰点后选择其一的规则，而同样购点法给与玩家的点数也是被明确写为460点。<del><font size=2>意不意外</font></del></em></p>
-<p>由此可知，规则书并没有倡导某一种选点方式优于其他的方式。<strong>因此当我们往往习惯使用“ROLL3选1”之类的村规时，应当相应的增加另外两种选点方式的额度以避免某种规则过度陷入劣势。</strong>但如果当你想要开购点法又在担忧自己无法处理这么多情报的时候，适当的调高其他规则的额度或者降低购点法所能提供的额度，并借此令玩家更倾向于选择其他规则也是不错的主意。</p>
-<p><strong>除此之外，骰掷属性意味着角色的每个属性都趋近平均值，会让最后形成的角色更加真实，购点法意味着玩家对于自己角色的定制更加自由，但同样这也会提升角色的形象所<font color=red>潜在的危机</font></strong>（因为这更有可能会促使角色的属性走向极端，<font color=red>任何一个属性的过度极端都可能会使得这个角色在某些时候的行为将会异于常人，并为其带来或好或坏的影响。一个合格的KP应当学会善于把握这样的机会来进一步帮助玩家塑造角色形象</font>），<strong>快速开桌规则则介于两种规则之间，中和了各自的优点与风险。</strong></p>
-<p>除此之外，<strong><font color=red>请务必牢记规则书中对于玩家的各个属性的解释以及他们所能到达的范畴</font></strong>。并检查玩家的角色们是否超出了这个范围。</p>
-<h3 id="技能上限"><a href="#技能上限" class="headerlink" title="技能上限"></a>技能上限</h3><p>如题所示，这个信息代表了你所允许的一个新的角色最初能够掌握的技能的数值。通常而言我们会根据本职或者兴趣分别做出限制。</p>
-<p><em>一点小知识，在COC7th规则书中，对技能上限进行限定这一条目只是一个可选规则。</em></p>
-<p>对玩家的技能进行一定程度上的限制最重要的目的便是确保游戏的平衡和趣味性——这意味着我们要时时刻刻确保我们正在描述的这个故事对于玩家而言是富有挑战和选择性的，<strong>因此我们要极力避免在<font color=red>关键情节</font>的判定中出现“几乎不可能失败”或者“几乎不可能成功”的判定</strong>。而是将事件成功的概率限制在一个我们所能预期的概率范围之内，再将最终的发展交给玩家的努力与骰子决定。</p>
-<blockquote>
-<p>路人甲和路人乙两个调查员在试图偷偷溜进一间有人在前台看守的店铺仓库之中，这名看店的售货员拥有着70点的侦查技能。路人甲向KP申请要通过潜行绕开售货员的注意，但却被告知这需要困难成功的对抗等级。但这对于路人甲只有60点的潜行技能而言毫无疑问难以完成。而这个时候路人乙告诉KP，他要主动去店里买点东西，再装作无意将商品打碎以吸引对方的注意。</p>
-</blockquote>
-<blockquote>
-<p>干得漂亮，KP认为路人乙的行为为路人甲的小动作取得了极大程度上的优势，现在路人甲只需要一个普通成功就能够瞒天过海偷偷进入仓库之中了。</p>
-</blockquote>
-<p>当你将技能的限制设置在80及更高的时候，这意味着玩家的角色即使什么都不做，也有着超过40%（近乎一半）的概率在面对一个处于劣势的情况下取得成功。而当这个数字下降到60，这个概率便会降低到了30%，当这个数字进一步下降为50%，甚至于连没有劣势情况下的判定的成功率都已经无法保证成功率。</p>
-<p>高于66%的概率我们通常认为大概率成功，50%左右的概率我们认为具有相当的风险，低于33%的概率我们认为不太可能成功。<strong>我们不应期望一个不太可能发生的事件一定能发生，更不应将一个关键的线索设置给一个成功率不高的判断。</strong>（当然，考虑到复数的调查员，或者在不同的环境下可能通过不同的判定取得相同的结果，一个判定的成功率往往会根据人数的不同一定程度上的有所增加，这一点也需要纳入考虑。）</p>
-<p><font color=red>将本职技能的上限限制在70-80之间，兴趣技能的上限限制在50-60之间是比较常用方法。</font></p>
-<p><strong>限制技能本质上还是对于角色行为的成功率的操纵，进一步说则是KP对于剧本发展与节奏的掌控，这对营造一个良好的玩家体验有着重要的印象。</strong>与此相类似的也包括COC的奖励骰、惩罚骰以及难度等级系统。由于COC本身判定机制的特殊性，因此COC中的判定比起Fate或者DND而言更具有弹性（不可控性）。KP对于成功率等数据如何操纵将会是我们后续章节反复提及的一个话题，控制技能的上限只是此中的一种技巧。<em>但无论如何，KP对于这一项的学习必然是建立在经验的基础上的。</em></p>
-<h3 id="职业-amp-技能推荐"><a href="#职业-amp-技能推荐" class="headerlink" title="职业&amp;技能推荐"></a>职业&amp;技能推荐</h3><p>在很多模组中我们经常能看到模组作者对于模组中基础的职业与技能的推荐。这些推荐的技能和职业往往是基于模组作者对于模组的认识而设立的。<strong>对技能和职业进行推荐更有助于维持一个团的正常运转而避免陷入困境。</strong></p>
-<p>事实上即使模组中并没有表示对职业与技能的推荐，在你仔细阅读模组之后如果你发现其中的某个<strong>关键</strong>要素依旧对角色的技能或属性有着硬性的要求，那么你也应当将其推荐给玩家。<em>当然你可以选择修改你的剧本，让你的剧本更加灵活而非如同模组一般死板。</em></p>
-<p>同理，KP也可以根据<font color=red>自身的水平与处理玩家的行为的能力</font>来进一步对玩家角色的职业与技能进行推荐<strong>最常见的有：禁止使用犯罪职业、禁止未成年人及学生职业、禁止驯兽等你无法掌握或不合常理的技能。</strong></p>
-<p>在玩家车卡之前便否决一部分可能会导致游戏体验不是那么愉快的规则和技能，比起在拿到玩家手中的角色或者是跑团过程中面对一系列突发实况而显得手足无措而言更为温和有效。</p>
-<blockquote>
-<p>张三最后交给了钱一一个这样的角色——一名身上背负着数件案宗的通缉犯，随身带着两把长刀和一个指虎，居无定所，藐视法律，在四处靠抢劫和偷窃为生——很显然，团内出现这样的角色对于钱一这个第一次开团的萌新KP而言几乎可以称作一场灾难了。</p>
-</blockquote>
-<h3 id="使用规则（村规）"><a href="#使用规则（村规）" class="headerlink" title="使用规则（村规）"></a>使用规则（村规）</h3><p>在讨论这个问题之前，不妨让我们先来思考这两个问题。</p>
-<p><strong>跑团时，当KP与规则书之间产生了矛盾，以谁为准？</strong></p>
-<p><strong>跑团是，当模组与规则书之间产生了矛盾，以谁为准？</strong></p>
-<p>在我们跑团的过程中，总是会充斥着各式各样村规、房规等超出规则书本身要求的新的要求或者规定。<font color=red>我不反对适当的村规存在对于跑团实际上起到了正面的作用。</font>但我们要达成这样一个共识那就是——</p>
-<p><strong><font color=red size=5>跑团是基于规则而存在，漠视规则的跑团不是跑团。</font></strong></p>
-<p>规则是跑团存在和繁荣的基础，跑团的所有行为都必须在规则的基础下进行。<strong>但这里的规则并不仅仅指代规则书，而是指在一次游戏中<font size=4>所有玩家</font>都理解并认可的<font size=4>规定</font></strong>。</p>
-<p>事实上正如前文所说，我们的跑团中充斥着各种超出了规则书的规则。甚至于很多我们司空见惯的东西（比如R3选1或者480购点）都实际上是玩家为了提升游戏体验而添加的规则。<strong>这也意味着如果KP或者特定的模组中存在着可能会提升游戏体验的额外规则的话，请放心大胆的去使用这些规则。</strong></p>
-<p>但这不代表规则就可以根据KP的意愿随意被涂改，因为一条合理而有效的规则不仅仅要能够提升玩家的游戏体验，<strong><font color=red>还需要让所有的玩家共同理解并认可</font></strong>。这种认可既可以是书面性的也可以是语言性的。<strong>一旦这种共同的认可达成，除非所有的玩家再度商讨并重新达成新的规则，否则KP不可以逾越。</strong></p>
-<p>除此之外我们还要理解到，超出规则书范畴的规则是临时的、特例的、局部的，绝对不是普遍性的，<strong><font color=red>不要用局部的规则去对局部意外的事情进行解释</font></strong>。这些规则每次使用前都必须确保你的玩家对此达成了共识。</p>
-<p>基于以上种种原因，<strong>我不推荐新人KP去尝试使用各种自己不熟练的各式村规或者可选规则</strong>，但如果你确信自己有能力掌控好一个能<strong>让游戏更加精彩</strong>(<em>指令所有玩家感到精彩而非仅有KP自己</em>)的规则的话，<font color=red size=4>告诉你的玩家你所采用的规则，让规则成为共识，然后大胆的去使用规则。</font></p>
-<p><strong>*关于规则的题外话</strong> ：KP如何在规则允许的范畴内操纵规则？答案其实很简单，那就是用规则书中的各种特例、修正、额外的小项，或者干脆使用另一种方式去解释规则（最典型的例子就是用难度等级还是奖罚骰，又或者两者都采用）。*</p>
-<p><strong>*关于大成功、大失败村规的题外话</strong>：这个规则似乎越来越在跑团的圈子里普遍开来了，但在玩家做出决定前还是要想明白这样两个问题：1、我真的能处理的好这些突发事件吗？我对这些突发事件的处理玩家们会觉得有趣还是无聊？2、更多的突发事件对于跑团的影响有多大？会不会多到干扰正常的游戏流程？希望玩家在此基础上选择适合自己的规则，理性思考，不要盲目跟风。<font size=2>（以我个人观点这个规则我其实并不赞同在超过一定人数的团中使用。大成功大失败总计占据了10%的可能性，这意味着每5次判定中将会有超过40%的概率存在一个大成功或者大失败。很显然这个概率对于人数较多、判定次数较多的团而言有点过高了。）</font>*</p>
-<p>【未完待续】</p>
-<p>PS：</p>
-<p>想不到吧，居然是中，这个看起来没什么可以讲的东西居然还没讲完。其实招募信息确实没什么可以讲的，主要还是聊一聊一些零散的观念之类的。</p>
-<p>字数略有超标，本章应当还会具体讲一讲关于审卡的问题，我果然还是太罗嗦了。</p>
-<p>在这篇文中我聊到控制玩家的技能上下限只是控制概率和节奏的一个技巧。事实上就我看来当KP绝大多数的技巧都是如此——除了熟读规则书这个基础以外，KP面对大多数的问题都应该有着不同角度看待的不同解决方法，并没有一个所谓的最优解。我们所做的一切努力本质上都是在提升我们可以使用的方法的数量。</p>
-<p>事实上我们把KP的工作可以抽象成打牌，对待问题的处理方法便是我们手中的牌，只是这一次我们手上的牌是可以重复使用的。玩家不断地向我们打出事件以，而我们需要根据手中有什么牌来决定如何应对玩家。扩充牌库不是必须的，但却能让我们的牌局变得更加精彩。</p>
-<p>如果您有对本文的内容存在疑惑或者反对观点的话，欢迎您在评论区留言或批评指正。</p>
-<p>以上，虽然各个章节之间无关联，但我还是更推荐从前言《如何当好一个KP?》开始看。 <a href="https://www.bilibili.com/read/cv5138446" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5138446</a></p>
-<p>上述一切观点均为个人观点。我也只不过是个刚刚算得上脱离萌新KP阶段的玩家，如果有任何意见上的不合的话……</p>
-<p><strong><font size=5>是我错了，对不起别骂了。</font></strong></p>
-<p>祝每个喜欢跑团的玩家都能遇到或成为一个优秀的Gm。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2592,7 +2491,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2605,7 +2504,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

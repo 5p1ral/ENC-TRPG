@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.maddestroyer.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="作者：叶兰舟链接：https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;386322852&#x2F;answer&#x2F;1140084093来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  模组创作本质上是个非常大的问题，就像“如何写好一个剧本”一样，可以写个一书架的书，绝对不是一两个问题可以写完的。所以这里只能简单地说一个概要的概要……  模组是什么先从这个话题说起吧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转载】如何制作TRPG模组？">
+<meta property="og:url" content="https://blog.maddestroyer.xyz/2020/06/22/How-to-made-a-TRPG-mod/index.html">
+<meta property="og:site_name" content="Spiral&#39;s Blog">
+<meta property="og:description" content="作者：叶兰舟链接：https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;386322852&#x2F;answer&#x2F;1140084093来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  模组创作本质上是个非常大的问题，就像“如何写好一个剧本”一样，可以写个一书架的书，绝对不是一两个问题可以写完的。所以这里只能简单地说一个概要的概要……  模组是什么先从这个话题说起吧">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.zhimg.com/50/v2-ee650e54d99459eb54f8ef5228f4d79d_hd.jpg">
+<meta property="article:published_time" content="2020-06-22T12:52:42.000Z">
+<meta property="article:modified_time" content="2020-06-22T13:01:30.236Z">
+<meta property="article:author" content="Spiral">
+<meta property="article:tag" content="TRPG">
+<meta property="article:tag" content="模组">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/50/v2-ee650e54d99459eb54f8ef5228f4d79d_hd.jpg">
+
+<link rel="canonical" href="https://blog.maddestroyer.xyz/2020/06/22/How-to-made-a-TRPG-mod/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【转载】如何制作TRPG模组？ | Spiral's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Spiral's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Spiral's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Something about TRPG.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.maddestroyer.xyz/2020/06/22/How-to-made-a-TRPG-mod/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-spiral.gif">
+      <meta itemprop="name" content="Spiral">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spiral's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【转载】如何制作TRPG模组？
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-22 20:52:42 / 修改时间：21:01:30" itemprop="dateCreated datePublished" datetime="2020-06-22T20:52:42+08:00">2020-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%B7%91%E5%9B%A2%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">跑团杂谈</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>作者：叶兰舟<br>链接：<a href="https://www.zhihu.com/question/386322852/answer/1140084093" target="_blank" rel="noopener">https://www.zhihu.com/question/386322852/answer/1140084093</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<p>模组创作本质上是个非常大的问题，就像“如何写好一个剧本”一样，可以写个一书架的书，绝对不是一两个问题可以写完的。所以这里只能简单地说一个概要的概要……</p>
+<p><img src="https://pic1.zhimg.com/50/v2-ee650e54d99459eb54f8ef5228f4d79d_hd.jpg" alt="img"></p>
+<h2 id="模组是什么"><a href="#模组是什么" class="headerlink" title="模组是什么"></a><strong>模组是什么</strong></h2><p>先从这个话题说起吧。本质上说，模组是给主持人的一个基本备忘录，无论如何千变万化，里面都会包含几个核心部分：<strong>数据，计划和战斗</strong>。</p>
+<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>很好理解，就是整个故事里会用到的各种信息，包括但不限于以下这些：</p>
+<ol>
+<li><strong>盟友</strong>：所有有重要剧情的友善NPC，线索的重要来源。通常来说，每个NPC需要一张人物卡，包含了性格、能力、身上的物品，以及会提供的线索等信息，也需要外貌等细节的描绘。</li>
+<li><strong>BOSS</strong>：可能有实体，或者是一个组织，甚至是一种“现象”或者“灾难”。但无论如何，这都是故事的主要推动力，给玩家压力和挑战的主要来源。</li>
+<li><strong>怪物</strong>：敌对阵营的角色，玩家压力、挑战，和收益的主要来源。怪物的数据一般来说规则书上都会有，但根据模组的设计，这可能会有很多细节的变化，包括自己做的魔改，这都要记录在信息上。</li>
+<li><strong>世界</strong>：不同的特殊世界，根据世界观，地形、气候等因素都会有巨大的变化，比如DND里的异域世界，不同阵营的外域，每个都有截然不同的世界风貌，气候和环境影响。即使是现实世界，不同国家、不同时间段，也会有很多不同的问题，比如美国20年代的禁酒令，50年代的麦卡锡主义等，都是会对世界和剧情产生巨大影响的。</li>
+<li><strong>地区</strong>：非战斗地区的信息。重要的补给、信息获取地等等，也包括了描述性的部分。特别要说的是，这块其实是新手主持人特别容易翻车的地方——除非是精心设计、用各种方式控制了玩家行动范围的模组，否则玩家（尤其是不那么合作的老油条）的行动，很容易会超出这个范围，让你精心设计的一大片区域完全派不上用场——所以哪些做得粗，哪些做得细，也是个很讲究的事儿。</li>
+<li><strong>战场</strong>：跟地区不同，战场需要专门的设计，因为会涉及到地形利用等要素。一些较为注重战斗的规则，比如DND，模组里的地城就会做得非常复杂，像是著名的retoee（重返元素神殿），里面的陷阱和机关就非常多，每个都有不同的设计。当然，很多时候战场是无法完全预设的，这就需要临时搬出来的想象力和经验了。</li>
+<li><strong>物品</strong>：关键物品的历史和信息。有时候它们是推动战役进行的核心，需要特殊处理。</li>
+<li><strong>其他</strong>：根据具体的规则不同而不同。比如DND里有一些预言类的法术，无限里有各种追溯过去或者未来的能力，应对这些能力需要有专门的一些信息。</li>
+</ol>
+<h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>这块是模组的重点，也是它跟一般的剧本最大的不同——因为NPC是“活的”。他们有自己的思想、自己的计划，会根据玩家的行动而改变。</p>
+<p>比如一个模组，城市里出现了不明的瘟疫，而最终BOSS（一个很强的死灵法师）目的其实是要召唤某个魔鬼，在准备献祭的时候，弄出了很多事儿，导致了瘟疫的产生。他会小心城市的反应，可能会在一些地方用魔宠或者手下设置警戒，如果发现了玩家在追查他的行动，就可能会藏得更深或者主动出击试图把玩家干掉。</p>
+<p>这说起来很简单，但有几个点需要注意的：</p>
+<ul>
+<li><p><strong>联动性</strong>：一般的模组不可能、也不应该做得太复杂，将十几个NPC的行为连在一起行动。举个例子，比如你做了一个敌人的复杂反应链，打了小的惹出大的，大的上面还有个议会，每个议员都有各自的目的和想法，要吵个几百次得到一个结果，再来对付玩家……基本上没什么必要。</p>
+</li>
+<li><p><strong>玩家可见度</strong>：比较糟糕的情况，是玩家的所有行为都得不到反馈，或者隐藏在迷雾中；最有趣的情况，就是玩家的行动不断能得到回馈（当然这不是绝对的，比如有些惊悚模组，可能玩家从头到尾都看不到敌人）。</p>
+</li>
+<li><ul>
+<li>举个非常典型的例子，一个DND团，玩家要去偷袭一个匪帮，在中途的一场遭遇战后没能拦住对方的魔法传信，让对方有了准备，于是敌人的山寨就做了完全的准备，这是个很容易理解的关联性。如果玩家一路打上山，没有任何掩饰，但敌人没有任何对应的准备，这就会让人觉得世界的反馈太弱；反之，敌人内部要做了大量的反应，二当家三当家各有心思，也得让玩家看得到、事先做好铺垫才行，否则就是过度反应了。</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何创作一个模组"><a href="#如何创作一个模组" class="headerlink" title="如何创作一个模组"></a>如何创作一个模组</h2><p>我个人创作时，一般会按照这样的流程进行：</p>
+<ol>
+<li>想好“我要做一个怎么样的故事”。这是一个喜剧，还是悲剧，还是热血和拯救的故事？确定基调。</li>
+<li>这个故事是在什么时间和地点发生的？在规则书或者其他地方查到这些信息，记下来。</li>
+<li>BOSS（无论是一个实体角色，还是某个组织，亦或某个“现象”，统一用BOSS指代）会用什么方式来实现自己的目标？会会因此为此做什么准备？把对应的信息写下来。针对不同的时间和地点，BOSS的手段肯定会有一些对应的变化。</li>
+<li>为了实现这些目标，BOSS会对故事世界产生什么样的改变，会安排出哪些手下（怪物），又会让哪些NPC转变为玩家潜在的盟友？</li>
+<li>这些盟友会做什么准备？又有什么目标？是否会有怪物和盟友的互相转化？</li>
+<li>根据BOSS、怪物和盟友的目标和准备，确定玩家进入之前的初始局势。</li>
+<li>根据初始局势，推算玩家可能会在不同的时间点遇到的挑战和解决方式。节奏是否得当？是否会让玩家在很长一段时间内一直面临巨大的压力而无法缓解，或者一直遇不到挑战？</li>
+<li>最终的挑战，也就是故事的高潮部分，是怎样的？根据现在的设计，是否有趣？如果不够有意思，需要根据高潮部分，反推一下之前的故事设计。</li>
+<li>在高潮之后，除了BOSS之外，盟友和敌人会有怎样的结局？根据玩家的行动，他们的命运有了怎样的改变？</li>
+<li>回到7，重新看一遍所有挑战。是否给予了玩家足够的解法？是否让每个玩家都有了高光时刻？</li>
+<li>填充数据，修改BUG，结束创作。</li>
+</ol>
+<h2 id="一些技巧和手法"><a href="#一些技巧和手法" class="headerlink" title="一些技巧和手法"></a>一些技巧和手法</h2><p>整个故事的创作是没有捷径的，我也不敢说自己就是优秀的故事创作者；但对于玩家来说，全程80分甚至90分的团固然厉害，但印象深刻的往往是那些全程70-80，但偶然有高光时刻可以爆出90-100分的团，这里就牵扯到一些有趣的手法了。</p>
+<p><strong>根据玩家定制</strong></p>
+<p>我现在带团带得很少，很挑PC，但对应的，也会为玩家做很多细节工作——TRPG的本质还是“跟人一起玩”。在我的这个回答里，提到过一些对应的问题。</p>
+<p><a href="https://www.zhihu.com/question/264726053/answer/284841507" target="_blank" rel="noopener">如何从零开始设计一款 TRPG？</a></p>
+<p>跟一般的电影/游戏不同的是，作为强交互的社交游戏，TRPG的最大优势之一，在于这是可以为玩家专门定制的！这就需要反复的沟通和询问，来找出玩家的爽点和乐趣。不同的玩家，爽点是绝对不一样的。</p>
+<p>TRPG绝对不是主持人跟玩家的对立，而是一个双赢的过程！</p>
+<p>无论是自己创作，还是拿到了一个别人写的模组，最好都能根据自己找到的玩家，对模组进行一些修改。</p>
+<p>比如一个玩家建了一张语言和历史学家的卡，而你的模组完全都是战斗，那么这个玩家能得到乐趣吗？也会有，但他最大的优势无法得到利用，那肯定是不够爽快的。在这种情况下，你就需要至少1-2个关键情节，让他有机会能够利用自己的技能，获得其他人无法获得的信息、线索或者优势，并且（有可能）在之后的其他挑战中起到巨大的作用，那么这个玩家就会感觉到自己派上了用场，这就是他的高光时刻。</p>
+<p>比如一个玩家的角色擅长破甲，可以砍穿别人打不破的装甲，那么你就可以刻意安排一些高装甲的敌人；一个玩家喜欢扮演日本的剑客，那你就应该让他有个“两人错身而过，一刀把敌人断头”的机会。即使没有成功，也是个会让他之后很长时间，想起来都津津乐道的地方。</p>
+<p>而如果玩家的背景中有些细节，也是可以抓出来利用的点。比如这人如果卡上写着怕黑，那就给他一个在黑暗中战斗的机会——总之，需要尽可能让玩家有表演自己的机会，展现自己的“存在感”，否则这个团的体验就很难好。</p>
+<p><strong>利用场景和细节</strong></p>
+<p>想象一下，这样一场战斗：双方在空旷的房间里遭遇，对方是标准怪物模板上的怪物或者NPC，没有做任何修改，投骰开始，移动，攻击，按部就班……对于纯新手来说，没什么问题，但对于老玩家来说，就很容易昏昏欲睡。</p>
+<p>DND里有一本注明的《挑战之书》（你看光这个就可以讲个几本书），专门讲解各种战斗场景的设计，并且做了很多有趣的例子，比如一条恶龙戴着易容帽伪装成善龙，骗玩家到它身前布置任务，然后就是一口龙息……这种打破常识，意料之外情理之中的设计，就很讨巧。</p>
+<p>对于非DND的游戏来说，利用场景的细节也是很重要的。就像怪猎一样，不同的场景里有不同的地形，可以让怪物撞墙、踩陷阱、利用高台优势玩空战，TRPG里的场景也可以衍生出非常多的细节，而且这在很大程度上也是TRPG专属的。</p>
+<p>比如力量足够的玩家，可能可以撞破脆弱的墙，弄塌房子；现代背景里的玩家可以设置复杂的潜入路线、制作炸药炸开门等等，但这些很可能需要结合玩家的情况，给予一定的提示和线索（比如玩家过个对应的知识判定，或者历史判定，就会发现某个BOSS的家其实是建立在古代的建筑之上，可以通过找到以前的下水道钻进去……）</p>
+<p>而怪物的出场也需要结合场景做各种设计。“踢开门看到敌人呆在那里”是最初级的方式，很多怪物/敌人，有能力进行场景移动的，就应该尽可能设计一些让人印象深刻的出场。记得生化危机2里舔爷的出场吗？雷雨，黑夜，危机四伏的洋馆，先是在资料上看到舔爷的信息，然后走到风雨飘摇、破碎的走廊上，舔爷在窗外一闪而过！再然后才是它在天花板上悄然出现，一步步的递进，场景、怪物、剧情完美结合。TRPG里没法控制玩家的“镜头”，但通过描述，也可以达到类似的效果，这就只能参考各种文学著作和影视/游戏来看了。</p>
+<h2 id="结语和参考"><a href="#结语和参考" class="headerlink" title="结语和参考"></a>结语和参考</h2><p>如最初所说，这方面的学问实在太多了，不同TRPG下的设计细节和深度研究，更是讲也讲不完的，我也不敢说自己就精通这门学问，在这里只能分享一些基本的流程和心得，希望对新手主持人们能有所帮助。</p>
+<p>分享一些参考书和资料：</p>
+<h3 id="故事方面——"><a href="#故事方面——" class="headerlink" title="故事方面——"></a>故事方面——</h3><p>《千面英雄》：很多神话故事的原型和流程，星战基本上就是这套路。</p>
+<p>《救猫咪1-3》：编剧入门书，调整故事节奏很重要。</p>
+<p>《故事：材质结构风格和银幕剧作的原理》：非常厉害的一本书，从各个角度讲解了“故事”本身是怎么创作的。但可能有些地方偏专业。</p>
+<p>《美剧编剧入门》：可以研究一下美剧的结构，很有用。</p>
+<h3 id="神秘学方面——"><a href="#神秘学方面——" class="headerlink" title="神秘学方面——"></a><strong>神秘学方面——</strong></h3><p>《巫术的一般理论 献祭的性质与功能》：对巫术的一些解构，神秘学方面的入门书籍之一</p>
+<p>《金枝》：神秘学和民俗，COC系列其实需要看一下，能学到很多技巧</p>
+<h3 id="其他——"><a href="#其他——" class="headerlink" title="其他——"></a>其他——</h3><p><a href="https://www.zhihu.com/question/36775625" target="_blank" rel="noopener">龙与地下城的有趣/经典/设计巧妙的模组？</a></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Spiral 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Spiral 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Spiral
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.maddestroyer.xyz/2020/06/22/How-to-made-a-TRPG-mod/" title="【转载】如何制作TRPG模组？">https://blog.maddestroyer.xyz/2020/06/22/How-to-made-a-TRPG-mod/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/TRPG/" rel="tag"># TRPG</a>
+              <a href="/tags/%E6%A8%A1%E7%BB%84/" rel="tag"># 模组</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/22/Chateau-2/" rel="prev" title="【转载】约书亚的跑团杂谈02：主持人的义务">
+      <i class="fa fa-chevron-left"></i> 【转载】约书亚的跑团杂谈02：主持人的义务
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模组是什么"><span class="nav-text">模组是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据"><span class="nav-text">数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计划"><span class="nav-text">计划</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何创作一个模组"><span class="nav-text">如何创作一个模组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些技巧和手法"><span class="nav-text">一些技巧和手法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语和参考"><span class="nav-text">结语和参考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#故事方面——"><span class="nav-text">故事方面——</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#神秘学方面——"><span class="nav-text">神秘学方面——</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他——"><span class="nav-text">其他——</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Spiral"
+      src="/images/avatar-spiral.gif">
+  <p class="site-author-name" itemprop="name">Spiral</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/spiral111" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;spiral111" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://maddestroyer.xyz/" title="https:&#x2F;&#x2F;maddestroyer.xyz" rel="noopener" target="_blank">Jigsaw's Blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://66trpg.com/" title="https:&#x2F;&#x2F;66trpg.com&#x2F;" rel="noopener" target="_blank">66TRPG</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://tieba.baidu.com/f?kw=%25C5%25DC%25CD%25C5" title="https:&#x2F;&#x2F;tieba.baidu.com&#x2F;f?kw&#x3D;%C5%DC%CD%C5" rel="noopener" target="_blank">百度跑团吧</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-spinner"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Spiral</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
