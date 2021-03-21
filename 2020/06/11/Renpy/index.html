@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"trpg.maddestroyer.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本教程基于风空Offical制作的跑团视频教程（《我们不用很麻烦很累就可以做跑团视频》共两期，如今已因不明原因删除），再加上本人一定程度的魔改而成。经过了一段时间的打磨，我认为此教程已经足够便利，完全可以实现流水线作业，故分享出来仅供参考。本方法制作出来的视频可能精细度不会很高，但是效率绝对数一数二（甚至你只要有整理好的跑团记录就可以一天之内做完）。 还等什么，抛弃肝帝生活，换我茂密头发！ 准备工">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【教程】如何使用Renpy制作跑团视频">
+<meta property="og:url" content="https://trpg.maddestroyer.xyz/2020/06/11/Renpy/index.html">
+<meta property="og:site_name" content="ENC-TRPG">
+<meta property="og:description" content="本教程基于风空Offical制作的跑团视频教程（《我们不用很麻烦很累就可以做跑团视频》共两期，如今已因不明原因删除），再加上本人一定程度的魔改而成。经过了一段时间的打磨，我认为此教程已经足够便利，完全可以实现流水线作业，故分享出来仅供参考。本方法制作出来的视频可能精细度不会很高，但是效率绝对数一数二（甚至你只要有整理好的跑团记录就可以一天之内做完）。 还等什么，抛弃肝帝生活，换我茂密头发！ 准备工">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621093825.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621093825.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621094102.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621095851.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621101003.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621101018.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621101036.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621102614.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621102736.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621102036.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/5qE9NSOKVxRTt2A.png">
+<meta property="og:image" content="https://i.loli.net/2020/06/21/YaLBhcQJMA6t9GX.png">
+<meta property="article:published_time" content="2020-06-12T03:28:55.000Z">
+<meta property="article:modified_time" content="2020-08-23T11:25:12.399Z">
+<meta property="article:author" content="Jigsaw">
+<meta property="article:tag" content="TRPG">
+<meta property="article:tag" content="replay">
+<meta property="article:tag" content="renpy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621093825.png">
+
+<link rel="canonical" href="https://trpg.maddestroyer.xyz/2020/06/11/Renpy/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【教程】如何使用Renpy制作跑团视频 | ENC-TRPG</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ENC-TRPG" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENC-TRPG</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Something about TRPG.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://trpg.maddestroyer.xyz/2020/06/11/Renpy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Jigsaw">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENC-TRPG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【教程】如何使用Renpy制作跑团视频
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-12 11:28:55" itemprop="dateCreated datePublished" datetime="2020-06-12T11:28:55+08:00">2020-06-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-23 19:25:12" itemprop="dateModified" datetime="2020-08-23T19:25:12+08:00">2020-08-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB/" itemprop="url" rel="index"><span itemprop="name">拓展阅读</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本教程基于风空Offical制作的跑团视频教程（《我们不用很麻烦很累就可以做跑团视频》共两期，如今已因不明原因删除），再加上本人一定程度的魔改而成。经过了一段时间的打磨，我认为此教程已经足够便利，完全可以实现流水线作业，故分享出来仅供参考。本方法制作出来的视频可能精细度不会很高，但是效率绝对数一数二（甚至你只要有整理好的跑团记录就可以一天之内做完）。</p>
+<p><font color=red><strong>还等什么，抛弃肝帝生活，换我茂密头发！</strong></font></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="素材与软件清单"><a href="#素材与软件清单" class="headerlink" title="素材与软件清单"></a>素材与软件清单</h4><p>Win10/Win7 64位系统</p>
+<p>跑团记录</p>
+<p>立绘、场景等素材</p>
+<p>跑团记录着色器（<a target="_blank" rel="noopener" href="https://logpainter.kokona.tech/">溯洄版</a>/<a href="http://trpg.maddestroyer.xyz/logpainter">陈末版</a>）[关于这两个版本的区别之后会提到，至于凤羽版的，现在我上不去了…]</p>
+<p><a target="_blank" rel="noopener" href="https://www.python.org/">Python3.X</a></p>
+<p><a target="_blank" rel="noopener" href="https://wwe.lanzous.com/iOiPldw7muj">终极自动脚本for renpy</a>（基于风空原代码的魔改版）</p>
+<p><a target="_blank" rel="noopener" href="https://www.renpy.org/">Renpy</a></p>
+<p>录屏软件：<a target="_blank" rel="noopener" href="https://obsproject.com/">OBS</a>/<a target="_blank" rel="noopener" href="https://www.bandicam.cn/">Bandicam</a>（貌似Win10可以使用Win+G录屏，不过我不推荐）</p>
+<p>文字转语音软件：<a target="_blank" rel="noopener" href="http://www.443w.com/tts/">朗读女</a>（在本版本非必须）</p>
+<p>剪辑软件：PR/Vegas/会声会影（非必须）</p>
+<p>编辑器：<a target="_blank" rel="noopener" href="https://atom.io/">Atom</a>/<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode</a>（非必须）</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.189.cn/t/fUzq2qf2EbMr">懒人包</a>（包含Renpy、Python3安装包、自动脚本、朗读女以及简单示例）</p>
+<h4 id="配置python环境"><a href="#配置python环境" class="headerlink" title="配置python环境"></a>配置python环境</h4><p><em>本部分为无编程基础的读者准备，认为自己能力足够的读者可以直接跳过，阅读脚本源码即可。</em></p>
+<p>首先百度python，进入官网（或者点击上文的超链接），不用管那些英文，直接找到Download图标以及下面的<strong>python3.X.X</strong>，点击进入下载页面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621093825.png" alt=""></p>
+<p>接着进入下载页面，你可能会很懵逼，不过不要紧，直接往下拉，直到出现如下界面。</p>
+<h1 id="【教程】如何使用Renpy制作跑团视频"><a href="#【教程】如何使用Renpy制作跑团视频" class="headerlink" title="【教程】如何使用Renpy制作跑团视频"></a>【教程】如何使用Renpy制作跑团视频</h1><p>本教程基于风空Offical制作的跑团视频教程（《我们不用很麻烦很累就可以做跑团视频》共两期，如今已因不明原因删除），再加上本人一定程度的魔改而成。经过了一段时间的打磨，我认为此教程已经足够便利，完全可以实现流水线作业，故分享出来仅供参考。本方法制作出来的视频可能精细度不会很高，但是效率绝对数一数二（甚至你只要有整理好的跑团记录就可以一天之内做完）。</p>
+<p><font color=red><strong>还等什么，抛弃肝帝生活，换我茂密头发！</strong></font></p>
+<h3 id="准备工作-1"><a href="#准备工作-1" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="素材与软件清单-1"><a href="#素材与软件清单-1" class="headerlink" title="素材与软件清单"></a>素材与软件清单</h4><p>Win10/Win7 64位系统</p>
+<p>跑团记录</p>
+<p>立绘、场景等素材</p>
+<p>跑团记录着色器（<a target="_blank" rel="noopener" href="https://logpainter.kokona.tech/">溯洄版</a>/<a href="http://trpg.maddestroyer.xyz/logpainter">陈末版</a>）[关于这两个版本的区别之后会提到，至于凤羽版的，现在我上不去了…]</p>
+<p><a target="_blank" rel="noopener" href="https://www.python.org/">Python3.X</a></p>
+<p><a target="_blank" rel="noopener" href="https://wwe.lanzous.com/iOiPldw7muj">终极自动脚本for renpy</a>（基于风空原代码的魔改版）</p>
+<p><a target="_blank" rel="noopener" href="https://www.renpy.org/">Renpy</a></p>
+<p>录屏软件：<a target="_blank" rel="noopener" href="https://obsproject.com/">OBS</a>/<a target="_blank" rel="noopener" href="https://www.bandicam.cn/">Bandicam</a>（貌似Win10可以使用Win+G录屏，不过我不推荐）</p>
+<p>文字转语音软件：<a target="_blank" rel="noopener" href="http://www.443w.com/tts/">朗读女</a>（在本版本非必须）</p>
+<p>剪辑软件：PR/Vegas/会声会影（非必须）</p>
+<p>编辑器：<a target="_blank" rel="noopener" href="https://atom.io/">Atom</a>/<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode</a>（非必须）</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.189.cn/t/fUzq2qf2EbMr">懒人包</a>（包含Renpy、Python3安装包、自动脚本、朗读女以及简单示例）</p>
+<h4 id="配置python环境-1"><a href="#配置python环境-1" class="headerlink" title="配置python环境"></a>配置python环境</h4><p><em>本部分为无编程基础的读者准备，认为自己能力足够的读者可以直接跳过，阅读脚本源码即可。</em></p>
+<p>首先百度python，进入官网（或者点击上文的超链接），不用管那些英文，直接找到Download图标以及下面的<strong>python3.X.X</strong>，点击进入下载页面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621093825.png" alt=""></p>
+<p>接着进入下载页面，你可能会很懵逼，不过不要紧，直接往下拉，直到出现如下界面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621094102.png" alt=""></p>
+<p>点击下载如图所示的exe文件，打开安装即可（一般来说只需要一直点击下一步[Next]）。</p>
+<p>需要注意的是，需要把<code>Add Python 3.X to PATH</code>的选项勾选上（图是老图请别介意）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621095851.png" alt=""></p>
+<p>接着打开命令行（cmd），输入<code>pip install baidu-aip</code>，等待安装完成。</p>
+<h3 id="正式开工"><a href="#正式开工" class="headerlink" title="正式开工"></a>正式开工</h3><h4 id="跑团Log处理"><a href="#跑团Log处理" class="headerlink" title="跑团Log处理"></a>跑团Log处理</h4><h5 id="如何导出跑团Log"><a href="#如何导出跑团Log" class="headerlink" title="如何导出跑团Log"></a>如何导出跑团Log</h5><p><strong>使用骰娘</strong></p>
+<p>现在的骰娘（塔骰和溯洄骰，惠惠骰我不知道）一般都支持<code>.log on</code>命令，只要再开团使输入该命令，在结团的时候输入<code>.log off</code>，骰娘便会帮你自动保存骰娘记录。</p>
+<p>（此类方法简单，但是毕竟记录保存在骰娘服务端，建议一定要找服务稳定的骰娘*[比如本人的骰娘三天两头重启，肯定就不靠谱]*，否则记录就全没了）</p>
+<p><strong>使用QQ的消息管理器</strong></p>
+<p><em>仅限PC</em></p>
+<p>打开腾讯QQ的界面，你会看到左下角有个按钮，单击之后显示出的页面左上角便是我们需要的消息管理器。</p>
+<p>进入消息管理器之后，在群聊板块找到自己用于跑团的群聊，右键导出成txt格式即可。</p>
+<p><em>（此方法导出的聊天记录需要经过手动筛选与着色，且容易出现部分文字离奇消失的灵异事件）</em></p>
+<h5 id="着色"><a href="#着色" class="headerlink" title="着色"></a>着色</h5><p>打开QQ跑团记录着色器（<a target="_blank" rel="noopener" href="https://logpainter.kokona.tech/">溯洄版</a>/<a href="http://trpg.maddestroyer.xyz/logpainter">陈末版</a>）。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621101003.png" alt=""></p>
+<p>将已经准备好的跑团记录全选复制到着色器的输入框内。</p>
+<p>将显示时间调为OFF，点击处理按钮。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621101018.png" alt=""></p>
+<p>在出现PC名字区域将同一个人的群名片调成一致。</p>
+<p>最后的结果如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621101036.png" alt=""></p>
+<p>全选预览区域的文件，复制粘贴到word中即可。</p>
+<h5 id="简单格式处理"><a href="#简单格式处理" class="headerlink" title="简单格式处理"></a>简单格式处理</h5><p><em>本方法适用于使用溯洄版Logpainter或者使用塔骰进行记录的读者（使用我的着色器则可直接跳过）</em></p>
+<p>将已经着色好的跑团记录复制进word文档（塔骰省略这一步）。</p>
+<p>接着打开word的替换面板，在查找栏输入<code>&lt;</code>，替换栏输入<code>^p【</code>，全部替换。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621102614.png" alt=""></p>
+<p>接着，将查找栏换成<code>&gt;</code>，输入栏换成<code>】^p</code>，再一次全部替换。</p>
+<p>最后的结果如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621102736.png" alt=""></p>
+<p>最后全选word文档，粘贴到txt文本文档中。</p>
+<p><strong><font color=red>建议手动检查一遍最终的记录，以防其中出现英文字符或其他不能作为文件名的字符。</font></strong></p>
+<h4 id="自动脚本的配置"><a href="#自动脚本的配置" class="headerlink" title="自动脚本的配置"></a>自动脚本的配置</h4><h5 id="初步配置"><a href="#初步配置" class="headerlink" title="初步配置"></a>初步配置</h5><p>直接看源代码的注释就行了，具体我就不再讲解。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># 需要在命令行输入 pip install baidu-aip（什么？你不懂什么是命令行？建议百度。）</span></span><br><span class="line"><span class="keyword">from</span> aip <span class="keyword">import</span> AipSpeech</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在风空原代码的基础上加入了百度的语音合成SDK，实现终极自动化流水线</span></span><br><span class="line"></span><br><span class="line">voice_flag=<span class="number">1</span> <span class="comment"># 语音合成开关 1为开启 0为关闭 网速慢的建议关闭</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 你的 APPID AK SK 建议自己去百度云平台申请，当然用我的也没关系（但保不准哪天我就关掉了）</span></span><br><span class="line">APP_ID = <span class="string">&#x27;20355681&#x27;</span></span><br><span class="line">API_KEY = <span class="string">&#x27;6gI2piIaG0DzRMTgDE6XN4S6&#x27;</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;yARGOWrKDHDSDIkkD1ngFNKvjvhvBWdX&#x27;</span></span><br><span class="line"></span><br><span class="line">client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开输入文件，整理后的log。log.txt需要是utf-8编码并且和自动脚本for renpy.py放在一个目录下面</span></span><br><span class="line">fobj = <span class="built_in">open</span>(<span class="string">&#x27;log.txt&#x27;</span>,mode=<span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="comment"># 创建用于复制进renpy的输出文件</span></span><br><span class="line">file_rpy = <span class="built_in">open</span>(<span class="string">&#x27;script.rpy&#x27;</span>,mode=<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 列出log.txt里所有出现的kp、骰子、pl及npc的角色名字</span></span><br><span class="line">char_list=[<span class="string">&quot;【GM】&quot;</span>,<span class="string">&quot;【黑桃3】&quot;</span>,<span class="string">&quot;【黑桃6】&quot;</span>,<span class="string">&quot;【梅花7】&quot;</span>,<span class="string">&quot;【梅花4】&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出每个角色对应的音色，顺序请与上面的char_list保持一致</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">spd：语速，取值0-9，默认为5中语速</span></span><br><span class="line"><span class="string">pit：音调，取值0-9，默认为5中语调</span></span><br><span class="line"><span class="string">vol：音量，取值0-15，默认为5中音量</span></span><br><span class="line"><span class="string">per：发音人选择, 0为女声，1为男声，3为感情男，4为感情女，默认为0</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">char_voice_list=[ </span><br><span class="line">	&#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="string">&#x27;per&#x27;</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="string">&#x27;pit&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="string">&#x27;per&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;pit&#x27;</span>: <span class="number">3</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="string">&#x27;per&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">&#x27;pit&#x27;</span>: <span class="number">7</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="string">&#x27;per&#x27;</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="string">&#x27;pit&#x27;</span>: <span class="number">8</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="string">&#x27;vol&#x27;</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="string">&#x27;per&#x27;</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="string">&#x27;pit&#x27;</span>: <span class="number">6</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line"><span class="comment">#立绘x的自定义显示宽度，顺序请与上面的char_list保持一致，单位为像素</span></span><br><span class="line">char_x=[<span class="string">&quot;500&quot;</span>,<span class="string">&quot;400&quot;</span>, <span class="string">&quot;400&quot;</span>, <span class="string">&quot;400&quot;</span>, <span class="string">&quot;400&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#立绘y的自定义显示高度，顺序请与上面的char_list保持一致，单位为像素</span></span><br><span class="line">char_y=[<span class="string">&quot;800&quot;</span>,<span class="string">&quot;700&quot;</span>, <span class="string">&quot;700&quot;</span>, <span class="string">&quot;700&quot;</span>, <span class="string">&quot;700&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#每个角色立绘位置。顺序请与上面的char_list保持一致</span></span><br><span class="line">location_list=[<span class="string">&quot;left&quot;</span>,<span class="string">&quot;right&quot;</span>, <span class="string">&quot;right&quot;</span>, <span class="string">&quot;right&quot;</span>, <span class="string">&quot;right&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#骰子的名字。注意骰子的名字同样应该在char_list出现</span></span><br><span class="line">dice_tag=<span class="string">&quot;【bot-drsink】&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#是否自动处理骰子。1为自动，0为直接显示投掷发言那一行</span></span><br><span class="line">dice_flag=<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#骰子音效文件名。如果选择自动处理骰子，需要设置以下部分</span></span><br><span class="line">rolling_se=<span class="string">&quot;manydice.mp3&quot;</span><span class="comment">#投掷音效</span></span><br><span class="line">suc_se=<span class="string">&quot;suc_se.mp3&quot;</span><span class="comment">#成功音效</span></span><br><span class="line">crit_suc_se=<span class="string">&quot;crit_suc_se.mp3&quot;</span><span class="comment">#大成功音效</span></span><br><span class="line">fail_se=<span class="string">&quot;fail_se.mp3&quot;</span><span class="comment">#失败音效</span></span><br><span class="line">fumble_fail_se=<span class="string">&quot;fumble_fail_se.wav&quot;</span><span class="comment">#大失败音效</span></span><br></pre></td></tr></table></figure>
+<h5 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h5><p>将处理好的跑团记录命名为<code>log.txt</code>，双击脚本运行。</p>
+<p>运行时请耐心等待，只要窗口没有消失就说明还在运行。</p>
+<p>如果窗口上出现<code>finish!</code>则表示已经运行完成，如果出现其他文字则表示出现了问题，可以按照提示对跑团记录进行修改。</p>
+<p>运行结束后根目录将会出现一个<code>script.rpy</code>文件以及一个<code>voice</code>文件夹。</p>
+<p><em>风空的原代码并不会自动生成语音，文件夹内放置的将会是拆分的文字，可通过朗读女将其批量转换成语音。</em></p>
+<h4 id="Renpy的配置"><a href="#Renpy的配置" class="headerlink" title="Renpy的配置"></a>Renpy的配置</h4><h5 id="新建项目与初始化"><a href="#新建项目与初始化" class="headerlink" title="新建项目与初始化"></a>新建项目与初始化</h5><p>下载好renpy，打开之后应该是这个界面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Spiral111/Img-Hosting@master/20200621102036.png" alt=""></p>
+<p>点击创建新工程，按照提示一步步来。</p>
+<p>打开项目根目录的<code>game</code>文件夹。</p>
+<p>将之前生成的<code>script.rpy</code>和<code>voice</code>文件夹粘贴进去。</p>
+<p>新建<code>image</code>文件夹，将准备好的立绘按角色命好名（例如<code>【GM】.jpg</code>）、和场景一起粘贴到<code>image</code>文件夹。</p>
+<h5 id="替换字体、-隐藏按钮与自动播放"><a href="#替换字体、-隐藏按钮与自动播放" class="headerlink" title="替换字体、 隐藏按钮与自动播放"></a>替换字体、 隐藏按钮与自动播放</h5><p><strong>替换字体</strong></p>
+<p>由于Renpy原生的字体对于中文的支持不是一般的差，所以我建议更换字体以获得更好的体验。</p>
+<p>将你想要替换的字体文件粘贴到项目根目录的<code>game</code>文件夹下。</p>
+<p>用记事本打开<code>gui.rpy</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 用于游戏内文本的字体。</span></span><br><span class="line">define gui.text_font = <span class="string">&quot;SourceHanSans-Light-Lite.ttf&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 用于角色名称的字体。</span></span><br><span class="line">define gui.name_text_font = <span class="string">&quot;SourceHanSans-Light-Lite.ttf&quot;</span></span><br></pre></td></tr></table></figure>
+<p>找到这一段语句，将其中的<code>SourceHanSans-Light-Lite.ttf</code>替换成你所要替换的字体即可</p>
+<p><strong>隐藏按钮</strong></p>
+<p>用记事本打开<code>gui.rpy</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">textbutton _(<span class="string">&quot;回退&quot;</span>) action Rollback()</span><br><span class="line">textbutton _(<span class="string">&quot;历史&quot;</span>) action ShowMenu(<span class="string">&#x27;history&#x27;</span>)</span><br><span class="line">textbutton _(<span class="string">&quot;快进&quot;</span>) action Skip() alternate Skip(fast=<span class="literal">True</span>, confirm=<span class="literal">True</span>)</span><br><span class="line">textbutton _(<span class="string">&quot;自动&quot;</span>) action Preference(<span class="string">&quot;auto-forward&quot;</span>, <span class="string">&quot;toggle&quot;</span>)</span><br><span class="line">textbutton _(<span class="string">&quot;保存&quot;</span>) action ShowMenu(<span class="string">&#x27;save&#x27;</span>)</span><br><span class="line">textbutton _(<span class="string">&quot;快存&quot;</span>) action QuickSave()</span><br><span class="line">textbutton _(<span class="string">&quot;快读&quot;</span>) action QuickLoad()</span><br><span class="line">textbutton _(<span class="string">&quot;设置&quot;</span>) action ShowMenu(<span class="string">&#x27;preferences&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>找到这些语句，在这些语句最前面加上<code>#</code>即可将其注释掉</p>
+<p><strong>自动播放</strong></p>
+<p>打开软件根目录下的<code>\renpy\common\00keymap.rpy</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toggle_afm = [<span class="string">&#x27;z&#x27;</span>],</span><br></pre></td></tr></table></figure>
+<p>修改括号内的字母即可修改对应的自动播放快捷键。</p>
+<h5 id="简单的语法"><a href="#简单的语法" class="headerlink" title="简单的语法"></a>简单的语法</h5><p>假设有一个叫<code>bg room</code>的背景图片，想要让他显示出来，就要在<code>script.rpy</code>里编辑，在对应的位置输入</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scene bg room</span><br></pre></td></tr></table></figure>
+<p>切换场景时使用的也是此语句。</p>
+<h4 id="录制与后期处理"><a href="#录制与后期处理" class="headerlink" title="录制与后期处理"></a>录制与后期处理</h4><p>打开Renpy，启动工程，进入游戏界面，暂时不动。</p>
+<p><img src="https://i.loli.net/2020/06/21/5qE9NSOKVxRTt2A.png" alt=""></p>
+<p>打开录屏软件，调整好后再回到Renpy生成的游戏界面。</p>
+<p><img src="https://i.loli.net/2020/06/21/YaLBhcQJMA6t9GX.png" alt=""></p>
+<p>开始游戏，在<strong>英文输入法</strong>状态下按下自动播放快捷键，耐心等待播放完成。</p>
+<p>之后可以用剪辑软件对录制的视频进行一定程度的后期处理，当然也可不处理。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>以上便是我制作跑团视频的方法，再次申明，该方法不是最好的方法，只是为了效率牺牲了精细度。</p>
+<p><del>（话说感觉专栏有点说不清楚，以后如果有空或许会出个视频）</del></p>
+<p>从总体上来说，跑团视频制作并没有难度，现在各种教程都有，千万不要被开头的门槛吓退。</p>
+<p><strong><font color=red>记住，内容产出重要的是内容，制作的工具并没有优劣之分。</font></strong></p>
+<p>如果有疑问欢迎在评论区（指B站评论区）留言，祝各位都能将自己有趣的跑团经历做成视频，分享给别人。</p>
+<p><strong>使用此方法制作的跑团视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1sa4y1Y755">https://www.bilibili.com/video/BV1sa4y1Y755</a></p>
+<p><strong>别人的Renpy跑团视频制作教程：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KT4y157Xr">https://www.bilibili.com/video/BV1KT4y157Xr</a></p>
+<p><strong>139的跑团视频制作工具推荐：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv6348879">https://www.bilibili.com/read/cv6348879</a></p>
+<h4 id="此方法的优点"><a href="#此方法的优点" class="headerlink" title="此方法的优点"></a>此方法的优点</h4><p><strong>没有版权问题：</strong>Renpy、跑团记录着色器均采用MIT协议开源（当然如果你自己要用盗版美术素材我也没办法）</p>
+<p><strong>模块化、流水线作业：</strong>跑团记录的处理、文字转语音、语音转视频都是分工进行的，即使中间有一步出现了错误也可以快速纠正。</p>
+<h4 id="此方法的缺点"><a href="#此方法的缺点" class="headerlink" title="此方法的缺点"></a>此方法的缺点</h4><p><strong>配音不够丰富：</strong>经我改进后的自动脚本使用的是百度的文字转语音SDK（别问我为什么不用其他的，其他的要钱）其他所以只有4个音色，就算是分成高低两个声调，也只能够支撑八个角色。解决的方法关闭脚本的文字转语音开关，使用朗读女以获得更佳体验。</p>
+<p><strong>不经过后期处理没有特殊效果：</strong>比如战斗轮如果想要有血条的话就得自己动手做了。</p>
+<p><strong>需要安装python以及baidu-aip模块：</strong>万事开头难，有多少人懒得去做第一步，这我也没办法。</p>
+<h4 id="其他方法的简单参考"><a href="#其他方法的简单参考" class="headerlink" title="其他方法的简单参考"></a>其他方法的简单参考</h4><p><strong>相关视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KT4y157Xr">https://www.bilibili.com/video/BV1KT4y157Xr</a></p>
+<h5 id="视频剪辑软件制作"><a href="#视频剪辑软件制作" class="headerlink" title="视频剪辑软件制作"></a>视频剪辑软件制作</h5><p>这个方法其实没有什么好说的，大部分UP主属于纯手工制作，主要就是技术问题。你技术好，操作熟练的话效率就会高，技术不好的话可能一个月都搞不出来一期（不要认为这种速度很快，大部分up拖更的原因其实都不是因为技术问题，而是现实忙碌/面团需要耗费精力整理记录/想要更好的表现形式，如果你现实很闲的话这种效率真的不快）。至于用什么剪辑软件纯属个人喜好，没有必要深究。</p>
+<p><strong>优点：</strong>如果本身熟悉剪辑软件的话没有其他的学习成本、可以在制作过程中拥有更好的表现形式。</p>
+<p><strong>缺点：</strong>对低技术力人员不够友好、某些软件吃内存吃得太死，对低配电脑也不友好。</p>
+<p><strong>相关视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19t411775m">https://www.bilibili.com/video/BV19t411775m</a></p>
+<h5 id="PPT制作"><a href="#PPT制作" class="headerlink" title="PPT制作"></a>PPT制作</h5><p>其实PPT制作法我的感觉是和PR制作法没有什么区别的，基本上也都是纯手工制作，不过会比PR友好一些（毕竟PPT不会吃你的内存，更不会突然就给你来个无法响应），学习成本也相对较低（会PPT的总比会PR的人多吧），算是对新手较为友好的方法了。</p>
+<p><strong>优点：</strong>学习成本较低，操作相对于剪辑软件有一定的简化。</p>
+<p><strong>缺点：</strong>惊了，我居然找不到缺点。</p>
+<p><strong>相关视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1it411Z7oU">https://www.bilibili.com/video/BV1it411Z7oU</a></p>
+<h5 id="无双AVG引擎"><a href="#无双AVG引擎" class="headerlink" title="无双AVG引擎"></a>无双AVG引擎</h5><p><em>由于我没有进该引擎的QQ群，也没有实操过该软件，所以我只能通过视频中的内容进行一些评价，可靠度可能不是很高</em></p>
+<p><strong>优点：</strong>与Renpy其实很类似，不过大部分语法都为中文，对国人友好一些。</p>
+<p><strong>缺点：</strong>up做的教程看得我头疼。</p>
+<p><strong>相关视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cb411J7Jj">https://www.bilibili.com/video/BV1cb411J7Jj</a></p>
+<h5 id="橙光游戏"><a href="#橙光游戏" class="headerlink" title="橙光游戏"></a>橙光游戏</h5><p><strong>优点：</strong>学习成本低，操作也很简单。</p>
+<p><strong>缺点：</strong>橙光的美术素材实际上不能用于制作视频（用来做跑团视频算是擦边球）</p>
+<p><strong>相关视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BW411J7zP">https://www.bilibili.com/video/BV1BW411J7zP</a></p>
+<h5 id="活字引擎"><a href="#活字引擎" class="headerlink" title="活字引擎"></a>活字引擎</h5><p>现版本我不推荐使用，不够成熟。</p>
+<p><strong>优点：</strong>轻量化语法、原作者在线解答。</p>
+<p><strong>缺点：</strong>预加载资源导致开启缓慢、内置字体导致无法自定义、在线转语音无缓存导致调试困难。</p>
+<p><strong>相关视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ek4y1r7vw">https://www.bilibili.com/video/BV1Ek4y1r7vw</a></p>
+<h5 id="一键式python脚本"><a href="#一键式python脚本" class="headerlink" title="一键式python脚本"></a>一键式python脚本</h5><p>有点像本方法的升级版，优点和缺点更加突出了。</p>
+<p><strong>相关视频：</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1T5411e78j">https://www.bilibili.com/video/BV1T5411e78j</a></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat-pay.png" alt="Jigsaw 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Jigsaw 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Jigsaw
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://trpg.maddestroyer.xyz/2020/06/11/Renpy/" title="【教程】如何使用Renpy制作跑团视频">https://trpg.maddestroyer.xyz/2020/06/11/Renpy/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/TRPG/" rel="tag"># TRPG</a>
+              <a href="/tags/replay/" rel="tag"># replay</a>
+              <a href="/tags/renpy/" rel="tag"># renpy</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/11/How-to-be-a-good-keeper-3-3/" rel="prev" title="【转载】如何当好一个KP？ 情节与场景篇（下一）">
+      <i class="fa fa-chevron-left"></i> 【转载】如何当好一个KP？ 情节与场景篇（下一）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/15/Keeper-night-talk-1/" rel="next" title="【转载】KP夜话:如何制裁刁民？">
+      【转载】KP夜话:如何制裁刁民？ <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B4%A0%E6%9D%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95"><span class="nav-text">素材与软件清单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83"><span class="nav-text">配置python环境</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Renpy%E5%88%B6%E4%BD%9C%E8%B7%91%E5%9B%A2%E8%A7%86%E9%A2%91"><span class="nav-text">【教程】如何使用Renpy制作跑团视频</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C-1"><span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B4%A0%E6%9D%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-1"><span class="nav-text">素材与软件清单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEpython%E7%8E%AF%E5%A2%83-1"><span class="nav-text">配置python环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%B7%A5"><span class="nav-text">正式开工</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%91%E5%9B%A2Log%E5%A4%84%E7%90%86"><span class="nav-text">跑团Log处理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AF%BC%E5%87%BA%E8%B7%91%E5%9B%A2Log"><span class="nav-text">如何导出跑团Log</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9D%80%E8%89%B2"><span class="nav-text">着色</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E6%A0%BC%E5%BC%8F%E5%A4%84%E7%90%86"><span class="nav-text">简单格式处理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%84%9A%E6%9C%AC%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-text">自动脚本的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9D%E6%AD%A5%E9%85%8D%E7%BD%AE"><span class="nav-text">初步配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC"><span class="nav-text">运行脚本</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Renpy%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-text">Renpy的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">新建项目与初始化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E5%AD%97%E4%BD%93%E3%80%81-%E9%9A%90%E8%97%8F%E6%8C%89%E9%92%AE%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%92%AD%E6%94%BE"><span class="nav-text">替换字体、 隐藏按钮与自动播放</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-text">简单的语法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%95%E5%88%B6%E4%B8%8E%E5%90%8E%E6%9C%9F%E5%A4%84%E7%90%86"><span class="nav-text">录制与后期处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-text">结语</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A4%E6%96%B9%E6%B3%95%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-text">此方法的优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A4%E6%96%B9%E6%B3%95%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="nav-text">此方法的缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%8F%82%E8%80%83"><span class="nav-text">其他方法的简单参考</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E8%BD%AF%E4%BB%B6%E5%88%B6%E4%BD%9C"><span class="nav-text">视频剪辑软件制作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PPT%E5%88%B6%E4%BD%9C"><span class="nav-text">PPT制作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E5%8F%8CAVG%E5%BC%95%E6%93%8E"><span class="nav-text">无双AVG引擎</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A9%99%E5%85%89%E6%B8%B8%E6%88%8F"><span class="nav-text">橙光游戏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B4%BB%E5%AD%97%E5%BC%95%E6%93%8E"><span class="nav-text">活字引擎</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E5%BC%8Fpython%E8%84%9A%E6%9C%AC"><span class="nav-text">一键式python脚本</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jigsaw"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Jigsaw</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Jigsaw111" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Jigsaw111" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.maddestroyer.xyz/" title="https:&#x2F;&#x2F;blog.maddestroyer.xyz" rel="noopener" target="_blank">Jigsaw's Blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://tieba.baidu.com/f?kw=%25C5%25DC%25CD%25C5" title="https:&#x2F;&#x2F;tieba.baidu.com&#x2F;f?kw&#x3D;%C5%DC%CD%C5" rel="noopener" target="_blank">跑团吧</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://66trpg.com/" title="https:&#x2F;&#x2F;66trpg.com&#x2F;" rel="noopener" target="_blank">66TRPG</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-spinner"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jigsaw</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
